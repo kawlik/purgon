@@ -2,16 +2,16 @@ import React from 'react';
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
-const About = () => {
+const ErrorPage = () => {
 
     /*   *   *   *   *   *   *   *   *   *   */
     
     return(
     <>
-    About
+    Error page
     </>
 )};
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
-export default About;
+export default ErrorPage;

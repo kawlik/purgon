@@ -1,0 +1,40 @@
+div.info-banner {
+@include stdFlex(row, nowrap, space-between);
+
+    background: white;
+    border-bottom: 1px solid lightgrey;
+    padding: $paddingMedium 10vw;
+    width: 100vw;
+
+    .elem {
+        font-size: large;
+        font-weight: 400;
+    }
+
+    a {
+    @include stdText($colorMainDark, center);
+    @include stdTransition();
+
+        margin: $marginMedium;
+        &:hover {color: $colorPrimary;}
+
+        span {margin: $marginSmall;}
+    }
+}
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+/*  Breakpoints */
+
+@media (max-width: 991px) {
+
+    div.info-banner {display: none;}
+
+}
+
+/*   *   *   *   *   *   *   *   *   *   */
+
+@media (min-width: 992px) {
+
+    div.info-banner {display: flex;}
+
+}

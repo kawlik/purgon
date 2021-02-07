@@ -12,4 +12,7 @@ Changelog
 ---
 
 _04.02.2021_
-1.  Setting up the project.
+*  Setting up the project.
+
+_07.02.2021_
+*   Home page almost ended

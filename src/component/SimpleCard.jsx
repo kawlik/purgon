@@ -2,16 +2,22 @@ import React from 'react';
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
-const About = () => {
+const SimpleCard = ({ type, icon, title, body }) => {
 
     /*   *   *   *   *   *   *   *   *   *   */
     
     return(
-    <>
-    About
-    </>
+    <div className={type}>
+
+        <span>{icon}</span>
+
+        <h3>{title}</h3>
+
+        <p>{body}</p>
+
+    </div>
 )};
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
-export default About;
+export default SimpleCard;

@@ -2,6 +2,7 @@
 
 
 $colorFont: #343a40;
+$colorActive: orangered;
 $colorMainDark: #000000;
 $colorMainLight: #F5F5F5;
 $colorPrimary: #FFD205;
@@ -31,7 +32,7 @@ $radiusMax: 100px;
 
 $transitionShort: 0.2s;
 $transitionMedium: 0.4s;
-$transitionMedium: 0.4s;
+$transitionLong: 0.8s;
 $transitionVeryLong: 1.6s;
 
 
@@ -65,11 +66,22 @@ $transitionVeryLong: 1.6s;
 }
 
 
-@mixin stdTransition($prop: all, $timing: ease-in-out, $durat: $trasnitionShort, $delay: 0) {
+@mixin stdTransition($prop: all, $timing: ease-in-out, $durat: $transitionShort, $delay: 0) {
     transition-property: $prop;
     transition-timing-function: $timing;
     transition-duration: $durat;
     transition-delay: $delay;
+}
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+/*  Animations  */
+
+@keyframes anim {
+    0% {
+
+    } 100% {
+
+    }
 }
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
@@ -108,4 +120,3 @@ $transitionVeryLong: 1.6s;
 @media (min-width: 1400px) {
 
 }
-

@@ -1,0 +1,189 @@
+header.page-menu {
+@include stdFlex(row, nowrap, space-between);
+
+    position: sticky;
+    right: 0;
+    left: 0;
+    top: 0;
+    
+    background: white;
+    border-bottom: 1px solid lightgrey;
+    box-shadow: 0 5px 10px -5px $colorSecondary;
+    overflow: hidden;
+    width: 100vw;
+    z-index: 100;
+    
+    .elem {
+        font-size: larger;
+        font-weight: 400;
+        padding: $paddingMedium;
+    }
+
+    .logo img {height: 64px;}
+
+    .navi .links {
+    @include stdFlex(row, nowrap, space-between);
+
+       list-style: none;
+       font-size: large;
+       font-weight: 600;
+
+        li {margin: 0 2vw;}
+    }
+
+    .info {
+
+        .desktop {
+        @include stdTransition();
+
+            background: $colorPrimary;
+            border: none;
+            border-radius: $radiusMax;
+            color: lighten($colorMainLight, 10%);
+            font-weight: 600;
+            padding: $paddingMedium $paddingBig;
+
+            &:hover {
+                
+                background: lighten($colorPrimary, 10%);
+                box-shadow: 0 0 25px -10px $colorSecondary;
+            }
+        }
+
+        .mobile {
+
+            position: relative;
+
+            border: none;
+            height: 40px;
+            width: 40px;
+
+            &::before, &::after {
+            @include stdTransition();
+
+                content: "";
+                position: absolute;
+                left: 0;
+
+                background: $colorFont;
+                border-radius: $radiusMax;
+                height: 4px;
+                width: 100%;
+            }
+
+            &::before {
+                top: 0;
+                box-shadow: 0 12px $colorFont;
+            }
+
+            &::after {
+                bottom: 0;
+                box-shadow: 0 -12px $colorFont;
+            }
+        }
+    }
+}
+    
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+/*  Breakpoints */
+    
+ @media (max-width: 1199px) {
+    
+    header.page-menu {
+
+        flex-wrap: wrap;
+        padding: 0 5vw;
+
+        .navi {
+
+            order: 2;
+            flex-basis: 100%;
+
+            display: none;
+            transform: scaleY(1);
+
+            &.active {
+                display: flex;
+                transform: scaleY(1);
+            }
+        
+            .links {
+                
+                flex-grow: 1;
+                flex-direction: column;
+                font-size: x-large;
+                font-weight: 300;
+
+                li {
+                    margin: 2vw;
+                }
+
+                a.active {font-weight: 600;}
+            }
+        }
+
+
+        .info .mobile {display: block;}
+        .info .desktop {display: none;}
+    }
+    
+}
+    
+/*   *   *   *   *   *   *   *   *   *   */
+    
+@media (min-width: 1200px) {
+    
+    header.page-menu {
+
+        padding: $paddingMedium 5vw;
+
+        .navi .links {
+        @include stdFlex(row, nowrap, space-between);
+        
+            list-style: none;
+            font-size: large;
+            font-weight: 600;
+        
+            li {margin: 0 2vw;}
+        
+            a {
+            @include stdTransition();
+        
+                &:hover {color: lighten($colorSecondary, 5%);}
+                &.active {
+                    
+                    position: relative;
+
+                    &::before, &::after {
+                        content: "";
+                        height: 28px;
+                        width: 28px;
+
+                        position: absolute;
+                        border: $borderThick solid $colorPrimary;
+                        top: 50%;
+                    }
+
+                    &::before {
+                        left: 0;
+                        transform: translateX(-50%) translateY(-35%);
+                        border-right-color: transparent;
+                        border-top-color: transparent;
+                    }
+
+                    &::after {
+                        right: 0;
+                        transform: translateX(50%) translateY(-65%);
+                        border-bottom-color: transparent;
+                        border-left-color: transparent;
+                    }
+                }
+            }
+        }
+
+        .info .mobile {display: none;}
+        .info .desktop {display: block;}
+    }
+    
+}
+    

@@ -9,12 +9,22 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
     font-size: medium;
     font-weight: 300;
     color: $colorFont;
+
+    background-image: url('../img/background.png');
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 a:link      {color: $colorFont; text-decoration: none;}
@@ -22,10 +32,28 @@ a:visited   {color: $colorFont; text-decoration: none;}
 a:active    {color: $colorFont; text-decoration: none;}
 a:hover     {color: $colorFont; text-decoration: none;}
 
-/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
-/*  Layout      */
+main {
+@include stdFlex(column, nowrap);
 
+    min-height: 100vh
+}
 
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 /*  Components  */
+
+@import 'component/infoBanner';
+
+@import 'component/pageMenu';
+
+@import 'component/pageBanner';
+
+@import 'component/simpleCard';
+
+@import 'component/pageFooter';
+
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+/*  Layout      */
+
+@import 'layout/home';

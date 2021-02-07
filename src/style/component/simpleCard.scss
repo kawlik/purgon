@@ -1,0 +1,108 @@
+.simple-card {
+@include stdFlex(column, nowrap);
+@include stdTransition();
+
+    background: white;
+    border-radius: $radiusBig;
+    padding: $paddingBig;
+    margin: $marginBig 0;
+
+    svg {
+    @include stdTransition();
+
+        font-size: 36px; margin: $marginMedium;
+    }
+
+    h3 {
+    @include stdTransition();
+
+        font-size: 36px; margin: $marginMedium;
+    }
+
+    p {
+        font-size: larger;
+        padding: $paddingSmall;
+        text-align: justify;
+    }
+
+    &:hover {
+        box-shadow: 0 0 25px -5px $colorPrimary;
+
+        svg {color: $colorPrimary;}
+        h3 {color: $colorPrimary;}
+    }
+}
+
+
+.service-card {
+@include stdFlex(column, nowrap);
+@include stdTransition();
+
+    background: white;
+    border-radius: $radiusBig;
+    padding: $paddingMedium;
+    margin: $marginMedium 0;
+
+    span {
+    @include stdTransition();
+
+        background: $colorSecondary;
+        border-radius: $radiusMax
+    }
+
+    svg {
+    @include stdTransition();
+
+        color: $colorMainLight;
+        font-size: 32px;
+        margin: $marginMedium;
+    }
+
+    h3 {
+    @include stdTransition();
+
+        font-size: 32px;
+        margin: $marginMedium;
+    }
+
+    p {
+        font-size: large;
+        padding: $paddingSmall;
+        text-align: justify;
+    }
+
+    &:hover {
+        box-shadow: 0 0 25px -5px $colorSecondary;
+
+        span {background: lighten($colorSecondary, 10%);}
+        svg {color: white;}
+        h3 {color: $colorSecondary;}
+    }
+}
+
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+/*  Breakpoints */
+
+@media (max-width: 767px) {
+
+    .simple-card {flex-basis: 100%;}
+    .service-card {flex-basis: 100%;}
+
+}
+
+/*   *   *   *   *   *   *   *   *   *   */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .simple-card {flex-basis: 48%;}
+    .service-card {flex-basis: 48%;}
+
+}
+
+@media (min-width: 992px) {
+
+    .simple-card {flex-basis: 49%;}
+    .service-card {flex-basis: 31%;}
+
+}

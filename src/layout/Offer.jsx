@@ -2,16 +2,16 @@ import React from 'react';
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
-const About = () => {
+const Offer = () => {
 
     /*   *   *   *   *   *   *   *   *   *   */
     
     return(
     <>
-    About
+    Offer
     </>
 )};
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
-export default About;
+export default Offer;

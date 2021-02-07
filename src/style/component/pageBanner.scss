@@ -1,0 +1,90 @@
+div.page-banner {
+@include stdFlex(column, nowrap, center);
+
+    width: 100vw;
+    height: 85vh;
+    background: $colorPrimary;
+    overflow: hidden;
+    position: relative;
+
+    .particles {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    .content {
+    @include stdFlex(row, wrap, space-around);
+
+        max-width: 1400px;
+        position: absolute;
+        bottom: 0;
+
+        .elem {
+
+            flex-grow: 1;
+
+            &.text {
+            @include stdText($colorMainLight, center);
+
+                line-height: 220%;
+                margin: 10vh 0;
+            }
+
+            &.photo {
+            @include stdFlex(row, nowrap, space-around);
+            }
+
+            img {
+                max-height: 70vh;
+                max-width: 90vw;
+            }
+        }
+    }
+}
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+/*  Breakpoints */
+    
+@media (max-width: 991px) {
+
+    div.page-banner {
+
+        .elem {flex-basis: 90%;}
+
+        h2 {font-size: 42px; text-shadow: 0 0 20px $colorMainDark;}
+        h4 {font-size: 30px; text-shadow: 0 0 20px $colorMainDark;}
+
+    }
+
+}
+    
+/*   *   *   *   *   *   *   *   *   *   */
+    
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    div.page-banner {
+
+        .elem {flex-basis: 80%;}
+
+        h2 {font-size: 52px; text-shadow: 0 0 20px $colorMainDark;}
+        h4 {font-size: 44px; text-shadow: 0 0 20px $colorMainDark;}
+
+    }
+    
+}
+
+/*   *   *   *   *   *   *   *   *   *   */
+    
+@media (min-width: 1200px) {
+
+    div.page-banner {
+
+        .elem {flex-basis: 40%;}
+
+        h2 {font-size: 56px; text-shadow: 0 0 20px $colorMainDark;}
+        h4 {font-size: 48px; text-shadow: 0 0 20px $colorMainDark;}
+
+    }
+    
+}

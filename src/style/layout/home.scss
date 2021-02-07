@@ -1,0 +1,45 @@
+section.home {
+@include stdFlex(column, nowrap);
+
+    max-width: 1200px;
+
+    .entry-text {
+
+        flex-grow: 1;
+        font-size: x-large;
+        line-height: 220%;
+        margin: $marginBig 0;
+        text-align: center;
+
+        span {font-weight: 600;}
+    }
+
+    .simple-cards {
+    @include stdFlex(row, wrap, space-between, stretch);
+
+        flex-grow: 1;
+        padding: $paddingMedium;
+        margin: $marginBig;
+    }
+    
+    .simple-list {
+    @include stdText();
+        
+        flex-grow: 1;
+        font-size: larger;
+        line-height: 180%;
+        padding: $paddingBig;
+        margin: $marginBig;
+
+        li {margin: $marginMedium 0}
+    }
+
+
+    .service-cards {
+    @include stdFlex(row, wrap, space-between, stretch);
+    
+        flex-grow: 1;
+        padding: $paddingMedium;
+        margin: $marginBig;
+    }
+}

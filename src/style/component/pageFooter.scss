@@ -1,0 +1,100 @@
+footer.page-footer {
+@include stdFlex(row, nowrap, center);
+
+
+    background-image: url('../../img/footer.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100vw;
+
+    .content-wraper {
+    @include stdFlex(row, wrap, space-evenly, stretch);
+
+        width: 100%;
+        max-width: 1400px;
+
+        .elem {
+        @include stdFlex(column, nowrap, space-evenly, stretch);
+
+            
+            flex-grow: 1;
+            margin: $marginBig 0;
+            padding: $paddingMedium $paddingBig;
+            
+            .contact {
+                
+                h3 { margin: $marginMedium 0;}
+                
+                a {
+                    display: block;
+                    font-size: larger;
+                    margin: $marginSmall;
+                        
+                    span {margin: 0 $marginMedium;}
+                }
+            }
+                
+            .social {
+                    
+                h3 { margin: $marginMedium 0;}
+                    
+                a {
+                        
+                    background: $colorSecondary;
+                    border-radius: $radiusMax;
+                    margin: $marginMedium;
+                    padding: $paddingMedium 0;
+                        
+                    svg {
+                            
+                        color: $colorMainLight;
+                        font-size: x-large;
+                        margin: $marginMedium;
+                    }
+                }
+            }
+
+            a {
+                
+                svg{
+                @include stdTransition();
+                }
+
+                &:hover {
+                    svg {color: $colorPrimary;}
+                }
+            }
+        }
+    }
+}
+
+section.creator {
+    background-color: darken($colorFont, 15%);
+    color: $colorMainLight;
+    font-size: large;
+    letter-spacing: 2px;
+    padding: $paddingBig;
+    text-align: center;
+    width: 100vw;
+}
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+
+@media (max-width: 991px) {
+
+    footer.page-footer {
+        .elem {flex-basis: 92%;}
+    }
+
+}
+
+/*   *   *   *   *   *   *   *   *   *   */
+
+@media (min-width: 992px) {
+
+    footer.page-footer {
+        .elem {flex-basis: 48%;}
+    }
+}
