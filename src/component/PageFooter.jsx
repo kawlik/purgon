@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { StoreContext } from '../store/store';
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn,  FaPhoneAlt } from 'react-icons/fa';
 import { RiMailSendLine } from 'react-icons/ri';
@@ -8,6 +10,8 @@ import ContactForm from './ContactForm';
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
 const PageFooter = () => {
+
+    const { contact, social } = useContext(StoreContext);
 
     /*   *   *   *   *   *   *   *   *   *   */
     
@@ -20,17 +24,17 @@ const PageFooter = () => {
         <div className='elem'>
 
             <div className='contact'>
-                <h3>Contact</h3>
-                <a href='mailto:'><RiMailSendLine/><span>address</span></a>
-                <a href='tel: 0'><FaPhoneAlt/><span>phone</span></a>
-                <a href='tel: 0'><FaPhoneAlt/><span>phone</span></a>
+                <h3>Kontakt do nas</h3>
+                    <a href={`mailto: ${contact.email}`}><RiMailSendLine/><span>{contact.email}</span></a>
+                    <a href={`tel: ${contact.phone1}`}><FaPhoneAlt/><span>{contact.phone1}</span></a>
+                    <a href={`tel: ${contact.phone2}`}><FaPhoneAlt/><span>{contact.phone2}</span></a>
                 </div>
 
             <div className='social'>
-                <h3>Will find us</h3>
-                <a href='./'><FaFacebookF/></a>
-                <a href='./'><FaInstagram/></a>
-                <a href='./'><FaLinkedinIn/></a>
+                <h3>Znajdziesz nas</h3>
+                <a target='blank' href={social.facebook}><FaFacebookF/></a>
+                <a target='blank' href={social.instagram}><FaInstagram/></a>
+                <a target='blank' href={social.linkedin}><FaLinkedinIn/></a>
             </div>
 
         </div>

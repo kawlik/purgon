@@ -1,19 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink as Link } from 'react-router-dom';
+
+import { StoreContext } from '../store/store';
 
 import imgLogo from '../img/logo.png';
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
-const PageMenu = ({ pages }) => {
+const PageMenu = () => {
+
+    const { pages } = useContext(StoreContext);
+
+    /*   *   *   *   *   *   *   *   *   *   */
     
     const [ isExtended, setIsExtended ] = useState(false);
-
     const toggleMenu = () => setIsExtended(prev => !prev);
 
     /*   *   *   *   *   *   *   *   *   *   */
-
-    const allLinks = pages.map(page =><li key={page.id}><Link exact to={page.path}>{page.name}</Link></li>);
 
     const responviveMobile = `mobile${!isExtended ? '' : ' active'}`;
     const responsiveNavi = `elem navi${!isExtended ? '' : ' active'}`;
@@ -28,7 +31,17 @@ const PageMenu = ({ pages }) => {
         </div>
 
         <nav className={responsiveNavi}>
-            <ul className='links'>{allLinks}</ul>
+        <ul className='links'>
+
+            <li><Link exact to={`./${pages.home.path}`}>{pages.home.name}</Link></li>
+
+            <li><Link exact to={`./${pages.offer.path}`}>{pages.offer.name}</Link></li>
+
+            <li><Link exact to={`./${pages.complex.path}`}>{pages.complex.name}</Link></li>
+
+            <li><Link exact to={`./${pages.contact.path}`}>{pages.contact.name}</Link></li>
+
+        </ul>
         </nav>
 
         <div className='elem info'>

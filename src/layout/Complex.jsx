@@ -2,16 +2,16 @@ import React from 'react';
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
-const More = () => {
+const Complex = () => {
 
     /*   *   *   *   *   *   *   *   *   *   */
     
     return(
     <>
-    More
+    Complex
     </>
 )};
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
-export default More;
+export default Complex;

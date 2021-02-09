@@ -7,16 +7,19 @@
     padding: $paddingBig;
     margin: $marginBig 0;
 
-    svg {
+    img {
     @include stdTransition();
 
-        font-size: 36px; margin: $marginMedium;
+        height: 92px;
+        margin: $marginMedium;
+        width: 92px;
     }
 
     h3 {
     @include stdTransition();
 
-        font-size: 36px; margin: $marginMedium;
+        font-size: 36px; margin:
+        $marginMedium;
     }
 
     p {
@@ -28,6 +31,7 @@
     &:hover {
         box-shadow: 0 0 25px -5px $colorPrimary;
 
+        img {transform: scale(1.2);}
         svg {color: $colorPrimary;}
         h3 {color: $colorPrimary;}
     }
@@ -40,22 +44,26 @@
 
     background: white;
     border-radius: $radiusBig;
-    padding: $paddingMedium;
+    padding: $paddingBig;
     margin: $marginMedium 0;
 
     span {
+    @include stdFlex(row, nowrap, center);
     @include stdTransition();
 
         background: $colorSecondary;
-        border-radius: $radiusMax
+        border-radius: $radiusMax;
+        height: 124px;
+        overflow: hidden;
+        padding: $paddingBig;
+        width: 124px;
     }
 
-    svg {
-    @include stdTransition();
+    img {
 
-        color: $colorMainLight;
-        font-size: 32px;
+        height: 80px;
         margin: $marginMedium;
+        width: 80px;
     }
 
     h3 {

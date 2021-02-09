@@ -9,17 +9,8 @@ import PageFooter from './component/PageFooter';
 
 import MainContent from './layout/MainContent';
 
+import InstantAnim from './script/InstantAnim';
 import ScrollAnim from './script/ScrollAnim';
-
-/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
-
-const pages = [
-    {id: 1, path: '', name: 'Home',},
-    {id: 2, path: 'offer', name: 'Offer',},
-    {id: 3, path: 'about', name: 'About',},
-    {id: 4, path: 'more', name: 'More',},
-    {id: 5, path: 'contact', name: 'Contact',},
-];
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
@@ -27,10 +18,13 @@ const App = () => {
 
     useEffect(() => {
 
+        const jumpIn = new InstantAnim('.animJumpIn');
+        jumpIn.setUp('jumpIn 1s ease-in-out 1 0.4s normal both');
+
         const easeIn = new ScrollAnim('.animEaseIn');
         easeIn.setUp('easeIn 1s ease-in-out 1 0.2s normal both');
 
-    }, [])
+    }, [MainContent])
 
     /*   *   *   *   *   *   *   *   *   *   */
     
@@ -42,7 +36,7 @@ const App = () => {
 
 
         <Router>
-            <PageMenu pages={pages}/>
+            <PageMenu/>
             <MainContent/>
         </Router>
 

@@ -36,10 +36,15 @@ section.home {
 
 
     .service-cards {
-    @include stdFlex(row, wrap, space-between, stretch);
+    @include stdFlex(column, nowrap, space-between);
     
         flex-grow: 1;
         padding: $paddingMedium;
         margin: $marginBig;
+
+        .card-row {
+            @include stdFlex(row, wrap, center, stretch);
+            grid-gap: 20px;
+        }
     }
 }

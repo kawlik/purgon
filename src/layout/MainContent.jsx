@@ -1,30 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
+import { StoreContext } from '../store/store';
+
 import Home from './Home';
-import Offer from './Offer';
-import About from './About';
-import More from './More';
+import Complex from './Complex';
 import Contact from './Contact';
 import ErrorPage from './ErrorPage'
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
 const MainContent = () => {
-    
+
+    const { pages } = useContext(StoreContext);
+
+    console.log(pages.complex.path);
+
+    /*   *   *   *   *   *   *   *   *   *   */
+
     return(
     <main>
     <Switch>
 
-        <Route exact path='/' render={() => <Home/>}/>
-
-        <Route exact path='/offer' render={() => <Offer/>}/>
-
-        <Route exact path='/about' render={() => <About/>}/>
-
-        <Route exact path='/more' render={() => <More/>}/>
+        <Route exact path={`/${pages.home.path}`} render={() => <Home/>}/>
         
-        <Route exact path='/contact' render={() => <Contact/>}/>
+        <Route exact path={`/${pages.complex.path}`} render={() => <Complex/>}/>
+
+        <Route exact path={`/${pages.contact.path}`} render={() => <Contact/>}/>
 
         <Route render={() => <ErrorPage/>}/>
 

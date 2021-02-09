@@ -9,7 +9,7 @@ const SimpleCard = ({ type, icon, title, body }) => {
     return(
     <div className={type}>
 
-        <span>{icon}</span>
+        <span><img src={icon} alt='card image'/></span>
 
         <h3>{title}</h3>
 

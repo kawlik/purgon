@@ -32,7 +32,7 @@ class ScrollAnim {
     checkWidth = () => {
         this.nodeList.forEach(elem => {
 
-            if(elem.offsetTop - 0.9*window.innerHeight < window.pageYOffset) {
+            if(elem.offsetTop - window.innerHeight < window.pageYOffset) {
                 this.addAnimation(elem);
                 this.nodeList = this.nodeList.filter(e => e !== elem);
             }

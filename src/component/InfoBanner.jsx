@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
+import { StoreContext } from '../store/store';
+
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhoneAlt } from 'react-icons/fa';
+import { RiMailSendLine } from 'react-icons/ri';
+
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
-const infoBanner = () => {
+const InfoBanner = () => {
+
+    const { contact, social } = useContext(StoreContext);
     
     /*   *   *   *   *   *   *   *   *   *   */
 
@@ -12,14 +18,14 @@ const infoBanner = () => {
     <div className='info-banner'>
 
         <div className='elem social'>
-            <a href='./'><FaFacebookF/></a>
-            <a href='./'><FaInstagram/></a>
-            <a href='./'><FaLinkedinIn/></a>
+            <a target='blank' href={social.facebook}><FaFacebookF/></a>
+            <a target='blank' href={social.instagram}><FaInstagram/></a>
+            <a target='blank' href={social.linkedin}><FaLinkedinIn/></a>
         </div>
 
         <div className='elem info'>
-            <a href='./'><FaMapMarkerAlt/><span>address</span></a>
-            <a href='tel: 0'><FaPhoneAlt/><span>phone</span></a>
+            <a href={`mailto: ${contact.email}`}><RiMailSendLine/><span>{contact.email}</span></a>
+            <a href={`tel: ${contact.phone1}`}><FaPhoneAlt/><span>{contact.phone1}</span></a>
         </div>
 
     </div>
@@ -27,4 +33,4 @@ const infoBanner = () => {
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
-export default infoBanner;
+export default InfoBanner;
