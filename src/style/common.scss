@@ -76,11 +76,28 @@ $transitionVeryLong: 1.6s;
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 /*  Animations  */
 
-@keyframes anim {
+.animEaseIn {opacity: 0;}
+
+@keyframes easeIn {
+
     0% {
+        opacity: 0;
+        transform: translateY(150px) scale(0.3);
+    }
 
-    } 100% {
+    50% {
+        opacity: 1;
+        transform: translateY(0) scale(1.05);
+    }
 
+    75% {
+        opacity: 1;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 

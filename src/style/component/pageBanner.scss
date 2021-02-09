@@ -2,7 +2,7 @@ div.page-banner {
 @include stdFlex(column, nowrap, center);
 
     width: 100vw;
-    height: 85vh;
+    height: 90vh;
     background: $colorPrimary;
     overflow: hidden;
     position: relative;

@@ -18,12 +18,12 @@ const PageBanner = () => {
         <div className='content'>
 
             <div className='elem text'>
-                <h2>Big banner title</h2>
-                <h4>Smaller banner title</h4>
+                <h2 className='animFadeIn'>Big banner title</h2>
+                <h4 className='animFadeIn'>Smaller banner title</h4>
             </div>
 
             <div className='elem photo'>
-                <img src={imgDog} alt='big fafik baner'/>
+                <img className='animFadeIn' src={imgDog} alt='big fafik baner'/>
             </div>
 
         </div>

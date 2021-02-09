@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { HashRouter as Router } from 'react-router-dom';
+
+import StoreProvider  from './store/store';
 
 import InfoBanner from './component/InfoBanner';
 import PageMenu from './component/PageMenu';
@@ -7,6 +9,7 @@ import PageFooter from './component/PageFooter';
 
 import MainContent from './layout/MainContent';
 
+import ScrollAnim from './script/ScrollAnim';
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
@@ -22,19 +25,32 @@ const pages = [
 
 const App = () => {
 
+    useEffect(() => {
+
+        const easeIn = new ScrollAnim('.animEaseIn');
+        easeIn.setUp('easeIn 1s ease-in-out 1 0.2s normal both');
+
+    }, [])
+
     /*   *   *   *   *   *   *   *   *   *   */
     
     return(
-    <Router>
+    <StoreProvider>
+
 
         <InfoBanner/>
-        <PageMenu pages={pages}/>
 
-        <MainContent/>
+
+        <Router>
+            <PageMenu pages={pages}/>
+            <MainContent/>
+        </Router>
+
 
         <PageFooter/>
 
-    </Router>
+
+    </StoreProvider>
 )};
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
