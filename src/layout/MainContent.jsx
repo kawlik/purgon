@@ -14,8 +14,6 @@ const MainContent = () => {
 
     const { pages } = useContext(StoreContext);
 
-    console.log(pages.complex.path);
-
     /*   *   *   *   *   *   *   *   *   *   */
 
     return(

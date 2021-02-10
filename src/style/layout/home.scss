@@ -9,6 +9,7 @@ section.home {
         font-size: x-large;
         line-height: 220%;
         margin: $marginBig 0;
+        padding: $paddingMedium;
         text-align: center;
 
         span {font-weight: 600;}
@@ -31,7 +32,10 @@ section.home {
         padding: $paddingBig;
         margin: $marginBig;
 
-        li {margin: $marginMedium 0}
+        li {
+            font-size: x-large;
+            margin: $marginMedium 0;
+        }
     }
 
 

@@ -28,7 +28,13 @@ div.page-banner {
             @include stdText($colorMainLight, center);
 
                 line-height: 220%;
-                margin: 10vh 0;
+                margin: 10vh 0 0 0;
+
+                h4 {letter-spacing: 2px}
+                h2 {
+                    color: black;
+                    span {font-weight: 600;}
+                }
             }
 
             &.photo {
@@ -36,8 +42,8 @@ div.page-banner {
             }
 
             img {
-                max-height: 70vh;
-                max-width: 90vw;
+                max-height: 60vh;
+                max-width: 80vw;
             }
         }
     }

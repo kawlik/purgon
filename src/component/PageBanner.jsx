@@ -18,8 +18,8 @@ const PageBanner = () => {
         <div className='content'>
 
             <div className='elem text animJumpIn'>
-                <h2 className='animFadeIn'>Big banner title</h2>
-                <h4 className='animFadeIn'>Smaller banner title</h4>
+                <h4 className='animFadeIn'>RAZEM Z MOIMI LUDŹMI</h4>
+                <h2 className='animFadeIn'>Włączam <span>Skuteczny Marketing</span></h2>
             </div>
 
             <div className='elem photo animJumpIn'>
