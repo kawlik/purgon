@@ -9,7 +9,8 @@ import imgLogo from '../img/logo.png';
 
 const PageMenu = () => {
 
-    const { pages } = useContext(StoreContext);
+    const { currRef, pages } = useContext(StoreContext);
+    const scrollToRef = () => currRef.current.scrollIntoView();
 
     /*   *   *   *   *   *   *   *   *   *   */
     
@@ -46,7 +47,7 @@ const PageMenu = () => {
 
         <div className='elem info'>
             <button className={responviveMobile} onClick={() => toggleMenu()}></button>
-            <button className='desktop' onClick={() => {}}>Contact us!</button>
+            <button className='desktop' onClick={() => scrollToRef()}>Contact us!</button>
         </div>
 
     </header>

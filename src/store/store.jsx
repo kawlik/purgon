@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState, useRef } from 'react';
 
 import * as data from './data'
 
@@ -14,6 +14,8 @@ const StoreProvider = ({ children }) => {
     const [ pages, setPages ] = useState(data.pages);
     const [ social, setSocial ] = useState(data.social);
 
+    const currRef = useRef(null);
+
     /*   *   *   *   *   *   *   *   *   *   */
 
     useEffect(() => {
@@ -26,6 +28,7 @@ const StoreProvider = ({ children }) => {
         contact, setContact,
         pages, setPages,
         social, setSocial,
+        currRef,
     };
 
     /*   *   *   *   *   *   *   *   *   *   */

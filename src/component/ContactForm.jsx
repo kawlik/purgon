@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { StoreContext } from '../store/store';
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
 const ContactForm = () => {
+
+    const { currRef } = useContext(StoreContext);
 
     /*   *   *   *   *   *   *   *   *   *   */
     
     return(
     <>
     <h2 className='my-2 p-2'>Napisz do nas!</h2>
-    <form className='form-grup col-12'>
+    <form className='form-grup col-12' ref={currRef}>
 
         <input className='form-control my-2 p-2' type='text' name='name'  placeholder='Imię i nazwisko'/>
 
