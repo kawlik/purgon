@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/purgon/static/css/main.896e5688.chunk.css",
-    "main.js": "/purgon/static/js/main.15439c1a.chunk.js",
-    "main.js.map": "/purgon/static/js/main.15439c1a.chunk.js.map",
+    "main.css": "/purgon/static/css/main.22e0ee09.chunk.css",
+    "main.js": "/purgon/static/js/main.a35f434a.chunk.js",
+    "main.js.map": "/purgon/static/js/main.a35f434a.chunk.js.map",
     "runtime-main.js": "/purgon/static/js/runtime-main.9a057239.js",
     "runtime-main.js.map": "/purgon/static/js/runtime-main.9a057239.js.map",
     "static/css/2.150d169a.chunk.css": "/purgon/static/css/2.150d169a.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.b0c580b9.chunk.js.map": "/purgon/static/js/2.b0c580b9.chunk.js.map",
     "index.html": "/purgon/index.html",
     "static/css/2.150d169a.chunk.css.map": "/purgon/static/css/2.150d169a.chunk.css.map",
-    "static/css/main.896e5688.chunk.css.map": "/purgon/static/css/main.896e5688.chunk.css.map",
+    "static/css/main.22e0ee09.chunk.css.map": "/purgon/static/css/main.22e0ee09.chunk.css.map",
     "static/js/2.b0c580b9.chunk.js.LICENSE.txt": "/purgon/static/js/2.b0c580b9.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/purgon/static/media/footer.36876d01.png",
     "static/media/dog.a009b33c.png": "/purgon/static/media/dog.a009b33c.png",
@@ -29,7 +29,7 @@
     "static/js/runtime-main.9a057239.js",
     "static/css/2.150d169a.chunk.css",
     "static/js/2.b0c580b9.chunk.js",
-    "static/css/main.896e5688.chunk.css",
-    "static/js/main.15439c1a.chunk.js"
+    "static/css/main.22e0ee09.chunk.css",
+    "static/js/main.a35f434a.chunk.js"
   ]
 }
