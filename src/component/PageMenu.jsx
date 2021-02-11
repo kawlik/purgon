@@ -1,9 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { NavLink as Link } from 'react-router-dom';
 
 import { StoreContext } from '../store/store';
 
 import imgLogo from '../img/logo.png';
+
+import DomDetails from '../script/DomDetails';
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
@@ -11,16 +13,31 @@ const PageMenu = () => {
 
     const { currRef, pages } = useContext(StoreContext);
     const scrollToRef = () => currRef.current.scrollIntoView();
-
+    
     /*   *   *   *   *   *   *   *   *   *   */
     
     const [ isExtended, setIsExtended ] = useState(false);
     const toggleMenu = () => setIsExtended(prev => !prev);
+    const closeMenu = () => setTimeout(() => toggleMenu(), 400);
+
+    /*   *   *   *   *   *   *   *   *   *   */
+
+    const allOffer = pages.offer.pages.map(elem =>
+        (<li key={elem.path}><Link exact to={`./${elem.path}`} onClick={() => closeMenu()}>{elem.name}</Link></li>));
 
     /*   *   *   *   *   *   *   *   *   *   */
 
     const responviveMobile = `mobile${!isExtended ? '' : ' active'}`;
     const responsiveNavi = `elem navi${!isExtended ? '' : ' active'}`;
+
+    /*   *   *   *   *   *   *   *   *   *   */
+
+    useEffect(() => {
+
+        const dialog = new DomDetails('.sublist');
+        dialog.setUp();
+
+    }, []);
 
     /*   *   *   *   *   *   *   *   *   *   */
 
@@ -34,13 +51,21 @@ const PageMenu = () => {
         <nav className={responsiveNavi}>
         <ul className='links'>
 
-            <li><Link exact to={`./${pages.home.path}`}>{pages.home.name}</Link></li>
+            <li><Link exact to={`./${pages.home.path}`} onClick={() => closeMenu()}>{pages.home.name}</Link></li>
 
-            <li><Link exact to={`./${pages.offer.path}`}>{pages.offer.name}</Link></li>
+            <li>
+            <details className='sublist'>
 
-            <li><Link exact to={`./${pages.complex.path}`}>{pages.complex.name}</Link></li>
+                <summary>{pages.offer.name}</summary>
 
-            <li><Link exact to={`./${pages.contact.path}`}>{pages.contact.name}</Link></li>
+                <ul>{allOffer}</ul>
+
+            </details>
+            </li>
+
+            <li><Link exact to={`./${pages.complex.path}`} onClick={() => closeMenu()}>{pages.complex.name}</Link></li>
+
+            <li><Link exact to={`./${pages.contact.path}`} onClick={() => closeMenu()}>{pages.contact.name}</Link></li>
 
         </ul>
         </nav>

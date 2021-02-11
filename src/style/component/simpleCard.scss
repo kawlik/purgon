@@ -4,37 +4,45 @@
 
     background: white;
     border-radius: $radiusBig;
-    padding: $paddingBig;
+    padding: $paddingMedium;
     margin: $marginBig 0;
+
+    span {
+    @include stdFlex(row, nowrap, center);
+    
+        height: 124px;
+        overflow: hidden;
+        padding: $paddingBig;
+        width: 124px;
+    }
 
     img {
     @include stdTransition();
 
         height: 92px;
-        margin: $marginMedium;
+        margin: $marginSmall;
         width: 92px;
     }
 
     h3 {
-    @include stdTransition();
+        @include stdTransition();
+    
+            font-size: 28px;
+            margin: $marginMedium;
+        }
+    
+        p {
+            font-size: larger;
+            padding: $paddingSmall;
+            text-align: justify;
+        }
+    
+        &:hover {
 
-        font-size: 36px; margin:
-        $marginMedium;
-    }
-
-    p {
-        font-size: larger;
-        padding: $paddingSmall;
-        text-align: justify;
-    }
-
-    &:hover {
-        box-shadow: 0 0 25px -5px $colorPrimary;
-
-        img {transform: scale(1.2);}
-        svg {color: $colorPrimary;}
-        h3 {color: $colorPrimary;}
-    }
+            box-shadow: 0 0 25px -5px $colorPrimary;
+            img {transform: scale(1.2);}
+            h3 {color: $colorPrimary;}
+        }
 }
 
 
@@ -44,7 +52,7 @@
 
     background: white;
     border-radius: $radiusBig;
-    padding: $paddingBig;
+    padding: $paddingMedium;
     margin: $marginMedium 0;
 
     span {

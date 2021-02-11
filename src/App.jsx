@@ -19,7 +19,7 @@ const App = () => {
     useEffect(() => {
 
         const jumpIn = new InstantAnim('.animJumpIn');
-        jumpIn.setUp('jumpIn 0.5s ease-in-out 1 0.4s normal both');
+        jumpIn.setUp('easeIn 0.8s ease-in-out 1 0.8s normal both');
 
         const easeIn = new ScrollAnim('.animEaseIn');
         easeIn.setUp('easeIn 1s ease-in-out 1 0.2s normal both');

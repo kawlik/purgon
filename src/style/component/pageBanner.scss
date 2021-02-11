@@ -14,13 +14,20 @@ div.page-banner {
     }
 
     .content {
-    @include stdFlex(row, wrap, space-around);
 
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        align-content: center;
+
+        height: 100%;
+        width: 100%;
         max-width: 1400px;
         position: absolute;
         bottom: 0;
 
         .elem {
+        @include stdFlex(column, nowrap, center);
 
             flex-grow: 1;
 
@@ -28,7 +35,6 @@ div.page-banner {
             @include stdText($colorMainLight, center);
 
                 line-height: 220%;
-                margin: 10vh 0 0 0;
 
                 h4 {letter-spacing: 2px}
                 h2 {
@@ -38,12 +44,15 @@ div.page-banner {
             }
 
             &.photo {
-            @include stdFlex(row, nowrap, space-around);
+            @include stdFlex(row, nowrap, center);
+
+                align-items: flex-end;
+                align-content: flex-end;
             }
 
             img {
-                max-height: 60vh;
-                max-width: 80vw;
+                max-height: 100%;
+                max-width: 100%;
             }
         }
     }
@@ -56,10 +65,15 @@ div.page-banner {
 
     div.page-banner {
 
-        .elem {flex-basis: 90%;}
+        .content {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .elem {flex-grow: 1;}
 
-        h2 {font-size: 42px; text-shadow: 0 0 20px $colorMainDark;}
-        h4 {font-size: 30px; text-shadow: 0 0 20px $colorMainDark;}
+        h2 {font-size: 42px; text-shadow: 0 0 12px $colorMainDark;}
+        h4 {font-size: 30px; text-shadow: 0 0 12px $colorMainDark;}
 
     }
 
@@ -71,10 +85,15 @@ div.page-banner {
 
     div.page-banner {
 
-        .elem {flex-basis: 80%;}
+        .content {
+            flex-direction: row;
+            justify-content: space-around;
+        }
 
-        h2 {font-size: 52px; text-shadow: 0 0 20px $colorMainDark;}
-        h4 {font-size: 44px; text-shadow: 0 0 20px $colorMainDark;}
+        .elem {flex-grow: 1;}
+
+        h2 {font-size: 52px; text-shadow: 0 0 12px $colorMainDark;}
+        h4 {font-size: 44px; text-shadow: 0 0 12px $colorMainDark;}
 
     }
     

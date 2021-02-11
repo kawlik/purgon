@@ -1,5 +1,7 @@
 import React from 'react';
 
+import pageInBuild from '../img/in_build.png';
+
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
 const ErrorPage = () => {
@@ -8,7 +10,7 @@ const ErrorPage = () => {
     
     return(
     <>
-    Error page
+    <img className='error' src={pageInBuild} alt='page in build'/>
     </>
 )};
 

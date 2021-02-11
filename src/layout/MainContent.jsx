@@ -4,8 +4,8 @@ import { Route, Switch } from 'react-router-dom';
 import { StoreContext } from '../store/store';
 
 import Home from './Home';
-import Complex from './Complex';
-import Contact from './Contact';
+//  import Complex from './Complex';
+//  import Contact from './Contact';
 import ErrorPage from './ErrorPage'
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
@@ -22,9 +22,9 @@ const MainContent = () => {
 
         <Route exact path={`/${pages.home.path}`} render={() => <Home/>}/>
         
-        <Route exact path={`/${pages.complex.path}`} render={() => <Complex/>}/>
+        <Route exact path={`/${pages.complex.path}`} render={() => <ErrorPage/>}/>
 
-        <Route exact path={`/${pages.contact.path}`} render={() => <Contact/>}/>
+        <Route exact path={`/${pages.contact.path}`} render={() => <ErrorPage/>}/>
 
         <Route render={() => <ErrorPage/>}/>
 

@@ -45,7 +45,7 @@ const PageFooter = () => {
     </footer>
 
     <section className='creator'>
-        Purgon Media & Kamil Pawlik 2021 &copy; - All rights reserved
+        Pugon Media & Kamil Pawlik 2021 &copy; - All rights reserved
     </section>
 
     </>

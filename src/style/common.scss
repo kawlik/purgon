@@ -41,9 +41,8 @@ $transitionVeryLong: 1.6s;
 
 
 @mixin stdBorder($color: $colorFont, $radius: $radiusMedium, $width: $borderThin) {
-    border-color: $color;
+    border: $color solid $width;
     border-radius: $radius;
-    border-width: $width;
 }
 
 
@@ -77,12 +76,25 @@ $transitionVeryLong: 1.6s;
 /*  Animations  */
 
 @keyframes jumpIn {
-    from {
+
+    0% {
         opacity: 0;
-        transform: translateY(200px) scale(0.7);
-    } to {
+        transform: scale(0.3);
+    }
+
+    50% {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: scale(1.05);
+    }
+
+    75% {
+        opacity: 1;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
