@@ -12,6 +12,9 @@ import icon_5 from '../img/icon_5.png';
 import icon_6 from '../img/icon_6.png';
 import icon_7 from '../img/icon_7.png';
 
+import img_01 from '../img/img_01.png';
+import img_02 from '../img/img_02.png';
+
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
 const cardsSimple = [
@@ -58,8 +61,14 @@ const Home = () => {
         <PageBanner/>
 
         <section className='home'>
-        <div className='entry-text animEaseIn'>
+        <div className='entry-text'>
+
+            <section className='text animEaseIn'>
             Potrzebujesz <span>marketingu</span>, który wyróżni Cię na tle <span>konkurencji?</span> Chcesz <span>zaistnieć</span> w sieci, a może działasz <span>online</span>, jednak nie przynosi to widocznych <span>efektów?</span> Nasza agencja marketingowa to odpowiedź na <span>Twoje potrzeby.</span> Sprawdź, co możesz <span>zyskać współpracując z nami!</span>
+            </section>
+
+            <section className='photo'><img src={img_01} alt='grup handwork'/></section>
+
         </div>
 
         <div className='simple-cards'>
@@ -67,8 +76,14 @@ const Home = () => {
         </div>
 
         <div className='simple-list'>
+
+            <section className='photo'><img src={img_02} alt='searching for ideas'/></section>
+
+            <section className='list'>
             <h2 className='animEaseIn'>Naszymi działaniami:</h2>
             <ul>{allServices}</ul>
+            </section>
+
         </div>
 
         <div className='service-cards'>

@@ -2,7 +2,7 @@ import React from 'react';
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
-const Contact = () => {
+const Offer = () => {
 
     /*   *   *   *   *   *   *   *   *   *   */
     
@@ -10,10 +10,10 @@ const Contact = () => {
     <>
     
         
-        
+
     </>
 )};
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
-export default Contact;
+export default Offer;

@@ -1,18 +1,34 @@
 section.home {
 @include stdFlex(column, nowrap);
 
-    max-width: 1200px;
+    max-width: 1400px;
 
     .entry-text {
+    @include stdFlex(row, wrap, space-around);
 
-        flex-grow: 1;
-        font-size: x-large;
-        line-height: 220%;
-        margin: $marginBig 0;
-        padding: $paddingMedium;
-        text-align: center;
+    gap: 10px;
+    flex-grow: 1;
+    margin: $marginBig 0;
 
-        span {font-weight: 600;}
+        section {
+
+            padding: $paddingMedium;
+
+            &.text {
+                font-size: x-large;
+                line-height: 220%;
+                text-align: center;
+
+                span {font-weight: 600;}
+            }
+
+            &.photo {
+                img {
+                    max-width: 100%;
+                    border-radius: $marginBig;
+                }
+            }
+        }
     }
 
     .simple-cards {
@@ -24,19 +40,43 @@ section.home {
     }
     
     .simple-list {
+    @include stdFlex(row, wrap, space-around);
     @include stdText();
-        
-        flex-grow: 1;
-        font-size: larger;
-        line-height: 180%;
-        padding: $paddingBig;
-        margin: $marginBig $marginMedium;
 
-        li {
-            font-size: x-large;
-            margin: $marginMedium 0;
+        gap: 10px;
+        flex-grow: 1;
+        margin: $marginBig 0;
+
+
+    @include stdFlex(row, wrap, space-around);
+    margin: $marginBig 0;
+
+        section {
+
+            padding: $paddingMedium;
+
+            &.list {
+
+                font-size: larger;
+                line-height: 180%;
+                padding: $paddingBig;
+                margin: $marginBig $marginMedium;
+
+            li {
+                font-size: 20px;
+                margin: $marginMedium 0;
+            }
+        }
+
+        &.photo {
+            img {
+                    max-width: 100%;
+                    border-radius: $marginBig;
+            }
         }
     }
+
+}
 
 
     .service-cards {
@@ -49,6 +89,39 @@ section.home {
         .card-row {
             @include stdFlex(row, wrap, center, stretch);
             gap: 20px;
+        }
+    }
+}
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+/*  Breakpoints */
+
+/*   *   *   *   *   *   *   *   *   *   */
+
+@media (max-width: 991px) {
+    section.home {
+
+        .entry-text {
+            section {flex-basis: 98%;}
+        }
+
+        .simple-list {
+            section {flex-basis: 98%;}
+        }
+    }
+}
+
+/*   *   *   *   *   *   *   *   *   *   */
+
+@media (min-width: 992px) {
+    section.home {
+
+        .entry-text {
+            section {flex-basis: 48%;}
+        }
+
+        .simple-list {
+            section {flex-basis: 48%;}
         }
     }
 }

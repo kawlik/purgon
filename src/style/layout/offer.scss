@@ -1,0 +1,13 @@
+article.offer {
+
+    margin: $marginBig;
+
+    .list {
+
+        img {
+            background: $colorSecondary;
+            border-radius: $radiusBig;
+            padding: $paddingBig;
+        }
+    }
+}
