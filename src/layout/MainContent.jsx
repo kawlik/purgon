@@ -5,7 +5,7 @@ import { StoreContext } from '../store/store';
 
 import Home from './Home';
 
-import SocialMedia from './offer/SocialMedia';
+import Offer from './Offer';
 
 //  import Complex from './Complex';
 //  import Contact from './Contact';
@@ -16,7 +16,7 @@ import ErrorPage from './ErrorPage'
 
 const MainContent = () => {
 
-    const { pages } = useContext(StoreContext);
+    const { offer, pages } = useContext(StoreContext);
 
     /*   *   *   *   *   *   *   *   *   *   */
 
@@ -27,19 +27,19 @@ const MainContent = () => {
         <Route exact path={`/${pages.home.path}`} render={() => <Home/>}/>
         
 
-        <Route exact path={`/${pages.offer.pages[0].path}`} render={() => <SocialMedia/>}/>
+        <Route exact path={`/${pages.offer.pages[0].path}`} render={() => <Offer content={offer.socialMedia}/>}/>
 
-        <Route exact path={`/${pages.offer.pages[1].path}`} render={() => <ErrorPage/>}/>
+        <Route exact path={`/${pages.offer.pages[1].path}`} render={() => <Offer content={offer.websites}/>}/>
 
-        <Route exact path={`/${pages.offer.pages[2].path}`} render={() => <ErrorPage/>}/>
+        <Route exact path={`/${pages.offer.pages[2].path}`} render={() => <Offer content={offer.googleAds}/>}/>
 
-        <Route exact path={`/${pages.offer.pages[3].path}`} render={() => <ErrorPage/>}/>
+        <Route exact path={`/${pages.offer.pages[3].path}`} render={() => <Offer content={offer.positioning}/>}/>
 
-        <Route exact path={`/${pages.offer.pages[4].path}`} render={() => <ErrorPage/>}/>
+        <Route exact path={`/${pages.offer.pages[4].path}`} render={() => <Offer content={offer.graphics}/>}/>
 
-        <Route exact path={`/${pages.offer.pages[5].path}`} render={() => <ErrorPage/>}/>
+        <Route exact path={`/${pages.offer.pages[5].path}`} render={() => <Offer content={offer.photoViedo}/>}/>
 
-        <Route exact path={`/${pages.offer.pages[6].path}`} render={() => <ErrorPage/>}/>
+        <Route exact path={`/${pages.offer.pages[6].path}`} render={() => <Offer content={offer.accessory}/>}/>
 
 
         <Route exact path={`/${pages.complex.path}`} render={() => <ErrorPage/>}/>

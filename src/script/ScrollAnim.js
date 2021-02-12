@@ -14,6 +14,9 @@ class ScrollAnim {
         if(this.nodeList.length > 0) {
             
             this.nodeList = [...this.nodeList];
+            this.nodeList.forEach(elem => elem.style.opacity = '0');
+
+            this.checkWidth();
             this.startListening(this.checkWidth);
         }
     }

@@ -43,14 +43,14 @@ header.page-menu {
                 @include stdFlex(column, nowrap);
                                         
                     list-style: none;
-                    transform: translateX(-50%) translateY(102%);
+                    transform: translateX(-50%) translateY(100%);
                     position: absolute;
                     bottom: 0;
                     left: 50%;
 
                     background-color: $colorMainLight;
                     gap: 10px;
-                    padding: $paddingMedium $paddingSmall;
+                    padding: $paddingMedium 0;
                     width: 280px;
 
                 }
@@ -192,7 +192,12 @@ header.page-menu {
             font-weight: 600;
         
             li {margin: 0 2vw;}
-        
+
+            details {
+
+                li {margin: $marginMedium 0}
+            }
+
             a {
             @include stdTransition();
         

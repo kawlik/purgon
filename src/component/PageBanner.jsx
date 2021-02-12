@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import ParticlesReady from './ParticlesReady';
 
 import imgDog from '../img/dog.png';
 
+import InstantAnim from '../script/InstantAnim';
+
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
 const PageBanner = () => {
     
+    /*   *   *   *   *   *   *   *   *   *   */
+
+    useEffect(() => {
+
+        const jumpIn = new InstantAnim('.animJumpIn');
+        jumpIn.setUp('easeIn 0.8s ease-in-out 1 0.8s normal both');
+
+    }, [])
+
     /*   *   *   *   *   *   *   *   *   *   */
 
     return(

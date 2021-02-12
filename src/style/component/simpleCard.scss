@@ -25,24 +25,24 @@
     }
 
     h3 {
-        @include stdTransition();
+    @include stdTransition();
     
-            font-size: 28px;
-            margin: $marginMedium;
-        }
+        font-size: 28px;
+        margin: $marginMedium;
+    }
     
-        p {
-            font-size: larger;
-            padding: $paddingSmall;
-            text-align: justify;
-        }
+    p {
+        font-size: larger;
+        padding: $paddingSmall;
+        text-align: center;
+    }
     
-        &:hover {
+    &:hover {
 
-            box-shadow: 0 0 25px -5px $colorPrimary;
-            img {transform: scale(1.2);}
-            h3 {color: $colorPrimary;}
-        }
+        box-shadow: 0 0 20px -5px $colorPrimary;
+        img {transform: scale(1.2);}
+        h3 {color: $colorPrimary;}
+    }
 }
 
 
@@ -84,11 +84,11 @@
     p {
         font-size: large;
         padding: $paddingSmall;
-        text-align: justify;
+        text-align: center;
     }
 
     &:hover {
-        box-shadow: 0 0 25px -5px $colorSecondary;
+        box-shadow: 0 0 20px -5px $colorSecondary;
 
         span {background: lighten($colorSecondary, 10%);}
         svg {color: white;}

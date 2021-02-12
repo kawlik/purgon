@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import PageBanner from '../component/PageBanner';
 import SimpleCard from '../component/SimpleCard';
+
+import ScrollAnim from '../script/ScrollAnim';
 
 import icon from '../img/logo_min.png';
 import icon_1 from '../img/icon_1.png';
@@ -12,13 +14,13 @@ import icon_5 from '../img/icon_5.png';
 import icon_6 from '../img/icon_6.png';
 import icon_7 from '../img/icon_7.png';
 
-import img_01 from '../img/img_01.png';
+import img_06 from '../img/img_06.png';
 import img_02 from '../img/img_02.png';
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
 const cardsSimple = [
-    {id: 1, title: 'Gwarancję skuteczności', body: 'Niezależnie od tego jak ambitne cele biznesowe Ci przyświecają, z nami zrealizujesz je w całości.', icon: icon,},
+    {id: 1, title: 'Gwarancja skuteczności', body: 'Niezależnie od tego jak ambitne cele biznesowe Ci przyświecają, z nami zrealizujesz je w całości.', icon: icon,},
     {id: 2, title: 'Wsparcie zawodowców', body: 'Bogate know-how przekuwamy na Twoje wyniki biznesowe. Jesteśmy doświadczonym zespołem, który zna tajniki marketingu i jest w stanie znaleźć remedium na każdy problem.', icon: icon,},
     {id: 3, title: 'Rozwiązania szyte na miarę', body: 'Nasze działania dostosowujemy do Twoich potrzeb oraz budżetu, wykorzystując narzędzia, które pozwalają skutecznie dotrzeć do grupy docelowej.', icon: icon,},
     {id: 4, title: 'Nieszablonowe podejście', body: 'Stale szukamy innowacyjnych rozwiązań, które pozwolą Tobie wyróżnić się na tle innych firm i osiągnąć przewagę konkurencyjną. Skontaktuj się z nami i dołącz do grona klientów, którzy przekonali się, że marketing można robić lepiej. Sprzedawaj skuteczniej i działaj online!', icon: icon,},
@@ -26,7 +28,7 @@ const cardsSimple = [
 
 const cardsService = [
     {id: 1, title: 'Social Media', body: 'Stały kontakt z klientami, budowanie zaufania oraz poszerzanie grona odbiorców - to wszystko możesz osiągnąć działając w mediach społecznościowych. Tworzymy atrakcyjne wpisy, które przyciągają klienta i zwiększają zapytania ofertowe.', icon: icon_1,},
-    {id: 2, title: 'Strony Internetowe', body: 'to często pierwszy kontakt klienta z Twoją firmą. Profesjonalna witryna zachęci go do skorzystania z Twoich usług. Tworzymy od zera i modernizujemy już istniejące strony internetowe. Dokładnie analizujemy potrzeby klienta i dostosowujemy do nich nasze projekty.', icon: icon_2,},
+    {id: 2, title: 'Strony Internetowe', body: 'To często pierwszy kontakt klienta z Twoją firmą. Profesjonalna witryna zachęci go do skorzystania z Twoich usług. Tworzymy od zera i modernizujemy już istniejące strony internetowe. Dokładnie analizujemy potrzeby klienta i dostosowujemy do nich nasze projekty.', icon: icon_2,},
     {id: 3, title: 'Reklamy Google', body: 'Google Ads to gwarancja zwiększenia wizyt na stronie internetowej, które przekładają się na wzrost sprzedaży. Efektywnie wykorzystujemy ustalony budżet, dostosowując przekaz do grupy odbiorców, która jest rzeczywiście zainteresowana danym produktem lub usługą.', icon: icon_3,},
     {id: 4, title: 'Pozycjonowanie stron', body: 'Działania SEO pomagają Twoim potencjalnym klientom znaleźć Twoją firmę w wyszukiwarkach internetowych. Działamy kompleksowo – zajmujemy się każdym aspektem, który wpływa na pozycję strony www w wynikach wyszukiwania.', icon: icon_4,},
     {id: 5, title: 'Projekty graficzne', body: '“Jak Cię widzą - tak Cię piszą”, a jakie masz grafiki - takie masz wyniki. Nasze projekty graficzne zapadają w pamięć i wzbudzają zainteresowanie. To oryginalne i pomysłowe prace wykonane według najnowszych trendów.', icon: icon_5,},
@@ -54,7 +56,16 @@ const Home = () => {
     const allServices = listServise.map((elem, index) => <li className='animEaseIn' key={index}>{elem}</li>)
 
     /*   *   *   *   *   *   *   *   *   *   */
+
+    useEffect(() => {
+
+        const easeIn = new ScrollAnim('.animEaseIn');
+        easeIn.setUp('easeIn 1s ease-in-out 1 0.2s normal both');
+
+    }, [])
     
+    /*   *   *   *   *   *   *   *   *   *   */
+
     return(
     <>
 
@@ -67,7 +78,7 @@ const Home = () => {
             Potrzebujesz <span>marketingu</span>, który wyróżni Cię na tle <span>konkurencji?</span> Chcesz <span>zaistnieć</span> w sieci, a może działasz <span>online</span>, jednak nie przynosi to widocznych <span>efektów?</span> Nasza agencja marketingowa to odpowiedź na <span>Twoje potrzeby.</span> Sprawdź, co możesz <span>zyskać współpracując z nami!</span>
             </section>
 
-            <section className='photo'><img src={img_01} alt='grup handwork'/></section>
+            <section className='photo'><img src={img_06} alt='grup handwork'/></section>
 
         </div>
 

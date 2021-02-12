@@ -11,6 +11,7 @@ const StoreContext = createContext(null);
 const StoreProvider = ({ children }) => {
 
     const [ contact, setContact ] = useState(data.contact);
+    const [ offer, setOffer ] = useState(data.offer);
     const [ pages, setPages ] = useState(data.pages);
     const [ social, setSocial ] = useState(data.social);
 
@@ -26,6 +27,7 @@ const StoreProvider = ({ children }) => {
 
     const storeValue = {
         contact, setContact,
+        offer, setOffer,
         pages, setPages,
         social, setSocial,
         currRef,

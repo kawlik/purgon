@@ -5,8 +5,6 @@ import { StoreContext } from '../store/store';
 
 import imgLogo from '../img/logo.png';
 
-import DomDetails from '../script/DomDetails';
-
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
 
 const PageMenu = () => {
@@ -18,7 +16,11 @@ const PageMenu = () => {
     
     const [ isExtended, setIsExtended ] = useState(false);
     const toggleMenu = () => setIsExtended(prev => !prev);
-    const closeMenu = () => setTimeout(() => toggleMenu(), 400);
+    const closeMenu = () => setTimeout(() => setIsExtended(false), 400);
+
+    const [ sublistVisible, setSublistVisible ] = useState(false);
+    const openSublist = () => !isExtended && setSublistVisible(true);
+    const closeSublist = () => setSublistVisible(false);
 
     /*   *   *   *   *   *   *   *   *   *   */
 
@@ -33,9 +35,6 @@ const PageMenu = () => {
     /*   *   *   *   *   *   *   *   *   *   */
 
     useEffect(() => {
-
-        const dialog = new DomDetails('.sublist');
-        dialog.setUp();
 
     }, []);
 
@@ -54,7 +53,7 @@ const PageMenu = () => {
             <li><Link exact to={`./${pages.home.path}`} onClick={() => closeMenu()}>{pages.home.name}</Link></li>
 
             <li>
-            <details className='sublist'>
+            <details className='sublist' onMouseOver={() => openSublist()} onMouseLeave={() => closeSublist()} open={sublistVisible}>
 
                 <summary>{pages.offer.name}</summary>
 
