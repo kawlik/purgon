@@ -63,7 +63,6 @@ const offer = {
                 'Poprawiamy ewentualne błędy na profilach',
                 'Tworzymy posty i angażujące treści',
                 'Realizujemy płatne kampanie reklamowe',
-                'Dostarczamy miesięczne raporty',
             ],
         },
         
@@ -101,7 +100,7 @@ const offer = {
     
         entry: {
             title: 'Strony Internetowe',
-            body: 'W Polsce i na świecie z dnia na dzień pojawia się coraz większa liczba użytkowników Mediów Społecznościowych, a przez to obecność w nich jest wręcz obowiązkowa! Wykorzystamy nieograniczone możliwości Facebooka, Instagrama i Linkedina, aby docierać do Twoich klientów. Przygotujemy dla Ciebie strategię marketingową dzięki, której zwiększysz sprzedaż i rozpoznawalność swojej marki.',
+            body: 'Strona internetowa to często pierwszy kontakt klienta z Twoją firmą. Profesjonalna witryna zachęci go do skorzystania z Twoich usług. Tworzymy od zera i modernizujemy już istniejące strony internetowe.',
             img: img_02,
         },
         
@@ -109,37 +108,32 @@ const offer = {
         services: {
             title: 'Jak działamy?',
             elems: [
-                'Analizujemy branżę i tworzymy strategię',
-                'Poprawiamy ewentualne błędy na profilach',
-                'Tworzymy posty i angażujące treści',
-                'Realizujemy płatne kampanie reklamowe',
-                'Dostarczamy miesięczne raporty',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             ],
         },
         
         
         quality: {
-            title: 'Zalety obecności w Social Media?',
+            title: 'Zalety posiadania strony internetowej?',
             elems: [
-                'Zwiększona rozpoznawalność marki',
-                'Zwiększenie sprzedaży',
-                'Lepszy kontakt z klientami',
+                '?',
+                '?',
+                '?',
             ],
         },
         
         
         prices: [
             {
-                amount: '799 zł',
-                services: ['prowadzenie Facebook lub Instagram', 'przygotowanie strategii marketingowej', 'tworzenie i publikacja treści', 'zwiększanie zainteresowania',],
+                amount: '1500 zł',
+                services: ['strona do 5 sekcji', 'galeria zdjęć (wraz z ich optymalizacją)', 'podpięcie map Google', 'formularz kontaktowy', 'brak podstron', 'aktywne numery telefonów', 'prosta, uniwersalna polityka prywatności', 'ustawione informacje o cookies',],
             },
             {
-                amount: '1499 zł',
-                services: ['prowadzenie Facebook i Instagram', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
-            },
-            {
-                amount: '2499 zł',
-                services: ['prowadzenie Facebook i Instagram', 'pełna obsługa mediów społecznościowych', 'kampanie reklamowe', 'dodatkowa możliwość prowadzenia LinkedIn i Pinterest',],
+                amount: '2500 zł',
+                services: ['wszystkie opcje jak w stronie wizytówce', 'podstrony', 'kalendarz zajęć (google)', 'lista obiektów', 'portfolio', 'indywidualne dostosowania',],
             },
         ],
     },
@@ -147,7 +141,7 @@ const offer = {
     googleAds: {
         entry: {
             title: 'Reklamy Google',
-            body: 'W Polsce i na świecie z dnia na dzień pojawia się coraz większa liczba użytkowników Mediów Społecznościowych, a przez to obecność w nich jest wręcz obowiązkowa! Wykorzystamy nieograniczone możliwości Facebooka, Instagrama i Linkedina, aby docierać do Twoich klientów. Przygotujemy dla Ciebie strategię marketingową dzięki, której zwiększysz sprzedaż i rozpoznawalność swojej marki.',
+            body: 'Kampanie Google Ads należą do jednych z najefektowniejszych kampanii marketingowych. Dokładnie analizujemy ofertę i efektywnie wykorzystujemy ustalony budżet, dostosowując przekaz do grupy odbiorców, która jest rzeczywiście zainteresowana danym produktem lub usługą - czyli Twoich potencjalnych klientów. Dodatkową korzyścią jest pełna mierzalność efektów dzięki, którym cały czas mamy pełną kontrolę nad tym co się dzieje. Po zakończeniu kampanii przygotowywujemy raport i dokładnie analizujemy nasze działania.',
             img: img_03,
         },
         
@@ -155,37 +149,36 @@ const offer = {
         services: {
             title: 'Jak działamy?',
             elems: [
-                'Analizujemy branżę i tworzymy strategię',
-                'Poprawiamy ewentualne błędy na profilach',
+                'Analizujemy działalność i tworzymy strategię',
+                'Przygotowujemy materiały reklamowe',
                 'Tworzymy posty i angażujące treści',
-                'Realizujemy płatne kampanie reklamowe',
-                'Dostarczamy miesięczne raporty',
+                'Realizujemy wyznaczone cele ciągle kontrolując efekty',
             ],
         },
         
         
         quality: {
-            title: 'Zalety obecności w Social Media?',
+            title: 'Zalety kampanii Google Ads?',
             elems: [
-                'Zwiększona rozpoznawalność marki',
-                'Zwiększenie sprzedaży',
-                'Lepszy kontakt z klientami',
+                'Szybkie efekty',
+                'Pełna mierzalność i kontrola',
+                'Wiele możliwości dotarcia do klienta',
             ],
         },
         
         
         prices: [
             {
-                amount: '799 zł',
-                services: ['prowadzenie Facebook lub Instagram', 'przygotowanie strategii marketingowej', 'tworzenie i publikacja treści', 'zwiększanie zainteresowania',],
+                amount: '??? zł',
+                services: ['?', '?', '?',],
             },
             {
-                amount: '1499 zł',
-                services: ['prowadzenie Facebook i Instagram', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
+                amount: '??? zł',
+                services: ['?', '?', '?',],
             },
             {
-                amount: '2499 zł',
-                services: ['prowadzenie Facebook i Instagram', 'pełna obsługa mediów społecznościowych', 'kampanie reklamowe', 'dodatkowa możliwość prowadzenia LinkedIn i Pinterest',],
+                amount: '??? zł',
+                services: ['?', '?', '?',],
             },
         ],
     },
@@ -193,7 +186,7 @@ const offer = {
     positioning: {
         entry: {
             title: 'Pozycjonowanie Stron',
-            body: 'W Polsce i na świecie z dnia na dzień pojawia się coraz większa liczba użytkowników Mediów Społecznościowych, a przez to obecność w nich jest wręcz obowiązkowa! Wykorzystamy nieograniczone możliwości Facebooka, Instagrama i Linkedina, aby docierać do Twoich klientów. Przygotujemy dla Ciebie strategię marketingową dzięki, której zwiększysz sprzedaż i rozpoznawalność swojej marki.',
+            body: 'SEO to działania, które mają na celu zwiększenie zauważalności twojej strony w wyszukiwarkach internetowych. Kompleksowo zajmujemy się wszystkimi aspektami technicznymi dzięki, którym Twoja witryna zostanie zauważona i pojawi się wysoko w przeglądarkach.',
             img: img_04,
         },
         
@@ -201,38 +194,32 @@ const offer = {
         services: {
             title: 'Jak działamy?',
             elems: [
-                'Analizujemy branżę i tworzymy strategię',
-                'Poprawiamy ewentualne błędy na profilach',
-                'Tworzymy posty i angażujące treści',
-                'Realizujemy płatne kampanie reklamowe',
+                'Ustalamy cel i strategię marketingową',
+                'Tworzymy specjalistyczny audyt',
+                'Realizujemy ustalone cele',
                 'Dostarczamy miesięczne raporty',
             ],
         },
         
         
         quality: {
-            title: 'Zalety obecności w Social Media?',
+            title: 'Zalety pozycjonowania stron?',
             elems: [
-                'Zwiększona rozpoznawalność marki',
-                'Zwiększenie sprzedaży',
-                'Lepszy kontakt z klientami',
+                'Wzrost odwiedzin strony przez potencjalnych klientów',
+                'Zwiększona rozpoznawalność',
+                'Przewaga nad konkurencją',
             ],
         },
         
         
         prices: [
             {
-                amount: '799 zł',
-                services: ['prowadzenie Facebook lub Instagram', 'przygotowanie strategii marketingowej', 'tworzenie i publikacja treści', 'zwiększanie zainteresowania',],
+                amount: '699 zł',
+                services: ['pełny raport wykrytych błędów', 'propozycja strategii pozycjonowania', 'analiza konkurencji',],
             },
             {
-                amount: '1499 zł',
-                services: ['prowadzenie Facebook i Instagram', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
-            },
-            {
-                color: 'blue',
-                amount: '2499 zł',
-                services: ['prowadzenie Facebook i Instagram', 'pełna obsługa mediów społecznościowych', 'kampanie reklamowe', 'dodatkowa możliwość prowadzenia LinkedIn i Pinterest',],
+                amount: '1199 zł',
+                services: ['pełny audyt i poprawa działania strony pod względem technicznym', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
             },
         ],
     },
@@ -240,7 +227,7 @@ const offer = {
     graphics: {
         entry: {
             title: 'Projekty graficzne',
-            body: 'W Polsce i na świecie z dnia na dzień pojawia się coraz większa liczba użytkowników Mediów Społecznościowych, a przez to obecność w nich jest wręcz obowiązkowa! Wykorzystamy nieograniczone możliwości Facebooka, Instagrama i Linkedina, aby docierać do Twoich klientów. Przygotujemy dla Ciebie strategię marketingową dzięki, której zwiększysz sprzedaż i rozpoznawalność swojej marki.',
+            body: '“Jak Cię widzą - tak Cię piszą”, a jakie masz grafiki - takie masz wyniki.Nasze projekty graficzne zapadają w pamięć i wzbudzają zainteresowanie. To oryginalne i pomysłowe prace wykonane według najnowszych trendów.',
             img: img_05,
         },
         
@@ -248,37 +235,36 @@ const offer = {
         services: {
             title: 'Jak działamy?',
             elems: [
-                'Analizujemy branżę i tworzymy strategię',
-                'Poprawiamy ewentualne błędy na profilach',
-                'Tworzymy posty i angażujące treści',
-                'Realizujemy płatne kampanie reklamowe',
-                'Dostarczamy miesięczne raporty',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             ],
         },
         
         
         quality: {
-            title: 'Zalety obecności w Social Media?',
+            title: 'Zalety ???',
             elems: [
-                'Zwiększona rozpoznawalność marki',
-                'Zwiększenie sprzedaży',
-                'Lepszy kontakt z klientami',
+                '?',
+                '?',
+                '?',
             ],
         },
         
         
         prices: [
             {
-                amount: '799 zł',
-                services: ['prowadzenie Facebook lub Instagram', 'przygotowanie strategii marketingowej', 'tworzenie i publikacja treści', 'zwiększanie zainteresowania',],
+                amount: '??? zł',
+                services: ['?', '?', '?',],
             },
             {
-                amount: '1499 zł',
-                services: ['prowadzenie Facebook i Instagram', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
+                amount: '??? zł',
+                services: ['?', '?', '?',],
             },
             {
-                amount: '2499 zł',
-                services: ['prowadzenie Facebook i Instagram', 'pełna obsługa mediów społecznościowych', 'kampanie reklamowe', 'dodatkowa możliwość prowadzenia LinkedIn i Pinterest',],
+                amount: '??? zł',
+                services: ['?', '?', '?',],
             },
         ],
     },
@@ -286,7 +272,7 @@ const offer = {
     photoViedo: {
         entry: {
             title: 'Video i zdjęcia',
-            body: 'W Polsce i na świecie z dnia na dzień pojawia się coraz większa liczba użytkowników Mediów Społecznościowych, a przez to obecność w nich jest wręcz obowiązkowa! Wykorzystamy nieograniczone możliwości Facebooka, Instagrama i Linkedina, aby docierać do Twoich klientów. Przygotujemy dla Ciebie strategię marketingową dzięki, której zwiększysz sprzedaż i rozpoznawalność swojej marki.',
+            body: 'Efektowny spot reklamowy to skuteczny sposób na pozyskanie klienta i promocję marki. Produkujemy wysokiej jakości materiały video oraz wykonujemy sesje zdjęciowe.',
             img: img_06,
         },
         
@@ -294,37 +280,36 @@ const offer = {
         services: {
             title: 'Jak działamy?',
             elems: [
-                'Analizujemy branżę i tworzymy strategię',
-                'Poprawiamy ewentualne błędy na profilach',
-                'Tworzymy posty i angażujące treści',
-                'Realizujemy płatne kampanie reklamowe',
-                'Dostarczamy miesięczne raporty',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             ],
         },
         
         
         quality: {
-            title: 'Zalety obecności w Social Media?',
+            title: 'Zalety ???',
             elems: [
-                'Zwiększona rozpoznawalność marki',
-                'Zwiększenie sprzedaży',
-                'Lepszy kontakt z klientami',
+                '?',
+                '?',
+                '?',
             ],
         },
         
         
         prices: [
             {
-                amount: '799 zł',
-                services: ['prowadzenie Facebook lub Instagram', 'przygotowanie strategii marketingowej', 'tworzenie i publikacja treści', 'zwiększanie zainteresowania',],
+                amount: '??? zł',
+                services: ['?', '?', '?',],
             },
             {
-                amount: '1499 zł',
-                services: ['prowadzenie Facebook i Instagram', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
+                amount: '??? zł',
+                services: ['?', '?', '?',],
             },
             {
-                amount: '2499 zł',
-                services: ['prowadzenie Facebook i Instagram', 'pełna obsługa mediów społecznościowych', 'kampanie reklamowe', 'dodatkowa możliwość prowadzenia LinkedIn i Pinterest',],
+                amount: '??? zł',
+                services: ['?', '?', '?',],
             },
         ],
     },
@@ -332,7 +317,7 @@ const offer = {
     accessory: {
         entry: {
             title: 'Akcesoria Marketingowe',
-            body: 'W Polsce i na świecie z dnia na dzień pojawia się coraz większa liczba użytkowników Mediów Społecznościowych, a przez to obecność w nich jest wręcz obowiązkowa! Wykorzystamy nieograniczone możliwości Facebooka, Instagrama i Linkedina, aby docierać do Twoich klientów. Przygotujemy dla Ciebie strategię marketingową dzięki, której zwiększysz sprzedaż i rozpoznawalność swojej marki.',
+            body: 'Oferujemy różnorodne akcesoria marketingowe, w tym m.in. plakaty, ulotki, roll-upy, koszulki, kubki, długopisy. Są to wysokiej jakości gadżety promocyjne, które wykorzystać można podczas kampanii reklamowych lub jako upominki dla klientów.',
             img: img_07,
         },
         
@@ -340,37 +325,36 @@ const offer = {
         services: {
             title: 'Jak działamy?',
             elems: [
-                'Analizujemy branżę i tworzymy strategię',
-                'Poprawiamy ewentualne błędy na profilach',
-                'Tworzymy posty i angażujące treści',
-                'Realizujemy płatne kampanie reklamowe',
-                'Dostarczamy miesięczne raporty',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             ],
         },
         
         
         quality: {
-            title: 'Zalety obecności w Social Media?',
+            title: 'Zalety ???',
             elems: [
-                'Zwiększona rozpoznawalność marki',
-                'Zwiększenie sprzedaży',
-                'Lepszy kontakt z klientami',
+                '?',
+                '?',
+                '?',
             ],
         },
         
         
         prices: [
             {
-                amount: '799 zł',
-                services: ['prowadzenie Facebook lub Instagram', 'przygotowanie strategii marketingowej', 'tworzenie i publikacja treści', 'zwiększanie zainteresowania',],
+                amount: '??? zł',
+                services: ['?', '?', '?',],
             },
             {
-                amount: '1499 zł',
-                services: ['prowadzenie Facebook i Instagram', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
+                amount: '??? zł',
+                services: ['?', '?', '?',],
             },
             {
-                amount: '2499 zł',
-                services: ['prowadzenie Facebook i Instagram', 'pełna obsługa mediów społecznościowych', 'kampanie reklamowe', 'dodatkowa możliwość prowadzenia LinkedIn i Pinterest',],
+                amount: '??? zł',
+                services: ['?', '?', '?',],
             },
         ],
     }

@@ -16,7 +16,10 @@ const PageMenu = () => {
     
     const [ isExtended, setIsExtended ] = useState(false);
     const toggleMenu = () => setIsExtended(prev => !prev);
-    const closeMenu = () => setTimeout(() => setIsExtended(false), 400);
+    const closeMenu = () => {
+        window.scrollTo(0, 0);
+        setTimeout(() => setIsExtended(false), 400);
+    };
 
     const [ sublistVisible, setSublistVisible ] = useState(false);
     const openSublist = () => !isExtended && setSublistVisible(true);

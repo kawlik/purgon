@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Entry from '../component/offer/Entry';
 import Quality from '../component/offer/Quality';
 import Services from '../component/offer/Services';
+import Price from '../component/offer/Price';
 
 import ScrollAnim from '../script/ScrollAnim';
 
@@ -32,9 +33,11 @@ const Offer = ({ content }) => {
     
         <Entry title={content.entry.title} body={content.entry.body} img={content.entry.img}/>
 
-        <Services title={content.services.title} elems={content.services.elems}/>
+        <Services category={content.entry.title} title={content.services.title} elems={content.services.elems}/>
 
-        <Quality title={content.quality.title} elems={content.quality.elems}/>
+        <Quality category={content.entry.title} title={content.quality.title} elems={content.quality.elems}/>
+
+        <Price category={content.entry.title} elems={content.prices}/>
 
     </article>
 )};

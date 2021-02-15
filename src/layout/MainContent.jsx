@@ -41,7 +41,6 @@ const MainContent = () => {
 
         <Route exact path={`/${pages.offer.pages[6].path}`} render={() => <Offer content={offer.accessory}/>}/>
 
-
         <Route exact path={`/${pages.complex.path}`} render={() => <ErrorPage/>}/>
 
         <Route exact path={`/${pages.contact.path}`} render={() => <ErrorPage/>}/>

@@ -6,6 +6,42 @@ article.offer {
     padding: $paddingSmall;
     max-width: 1400px;
 
+    .title {
+        position: relative;
+
+        span {
+            min-width: 260px;
+            position: absolute;
+            left: 50%;
+            top: -50%;
+            transform: translateX(-50%);
+
+            font-size: 16px;
+            color: $colorSecondary;
+
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+
+                background: $colorSecondary;
+                border-radius: $radiusMax;
+                height: 8px;
+                width: 8px;
+            }
+
+            &::before {
+                left: 0;
+                transform: translateX(-50%) translateY(-50%);
+            }
+
+            &::after {
+                right: 0;
+                transform: translateX(50%) translateY(-50%);
+            }
+        }
+    }
+
     .entry {
     @include stdFlex(row, wrap, space-around, stretch);
     gap: 10px;
@@ -13,7 +49,7 @@ article.offer {
         .elem {
             min-height: 200px;
             border-radius: $radiusBig;
-            padding: $paddingBig;
+            padding: $paddingBig $paddingSmall;
             overflow: hidden;
             position: relative;
         }
@@ -65,6 +101,7 @@ article.offer {
                 background-image: linear-gradient(315deg, rgba(#fbb034, 0) 0%, rgba(#ffdd00, 0) 74%);
                 box-shadow: 2px 2px 15px -5px $colorSecondary;
 
+                flex-grow: 1;
                 border-radius: $radiusBig;
                 color: $colorSecondary;
                 font-size: 28px;
@@ -108,7 +145,7 @@ article.offer {
     }
 
     .quality {
-    @include stdFlex(row, wrap, space-around);
+    @include stdFlex(column, nowrap, space-around);
     gap: 30px;
 
         .title {
@@ -147,6 +184,108 @@ article.offer {
             }
         }
     }
+
+    .price {
+    @include stdFlex(column, nowrap);
+    gap: 30px;
+    
+        .title {
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+    
+        .list {
+        @include stdFlex(row, wrap, space-around, stretch);
+    
+            gap: 30px;
+            list-style: none;
+            
+            li {
+            @include stdBorder(lighten($colorSecondary, 20%), $radiusBig);
+            @include stdTransition();
+
+                flex-grow: 1;
+                box-shadow: 0 0 10px -2px $colorSecondary;
+                background: $colorMainLight;
+                padding: 40px 0;
+
+                h3 {
+                @include stdFlex(row, nowrap, space-between);
+                @include stdTransition();
+
+                    width: 80%;
+                    border-top-right-radius: $radiusMax;
+                    border-bottom-right-radius: $radiusMax;
+
+                    color: white;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    text-shadow: 0 0 5px $colorSecondary;
+                    padding: $paddingSmall $paddingMedium;
+
+
+                    background-color: #eec0c6;
+                    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+
+                    &.__1 {
+                        background-color: #f2cf07;
+                        background-image: linear-gradient(315deg, #f2cf07 0%, #55d284 74%);
+                    }
+
+                    &.__2 {
+                        background-color: #045de9;
+                        background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+                    }
+
+                    &.__3 {
+                        background-color: #fce043;
+                        background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+                    }
+
+                    a {
+                    @include stdFlex(column, nowrap, center);
+                    @include stdTransition();
+                    
+                        border-radius: $radiusMax;
+                        background: white;
+                        height: 40px;
+                        width: 40px;
+
+                        &:hover {color: $colorPrimary;}
+                    }
+                }
+
+                &:hover {
+
+                    box-shadow: 0 0 15px -2px $colorPrimary;
+                    border-color: $colorPrimary;
+
+                    h3 {
+                        text-shadow: 0 0 5px $colorPrimary;
+                        color: $colorPrimary
+                    };
+                }
+            }
+
+            .subList {
+            @include stdFlex(column, nowrap, flex-start, stretch);
+            
+                gap: 10px;
+                list-style: none;
+                min-width: 240px;
+
+                li {
+                    border: none;
+                    box-shadow: none;
+                    padding: $paddingSmall $paddingMedium;
+
+                    font-size: 18px;
+                    text-align: left;
+                }
+            }
+        }
+    }
 }
 
 /*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
@@ -176,6 +315,12 @@ article.offer {
                 li {flex-basis: 90%;}
             }
         }
+
+        .price {
+            .list {
+                li {flex-basis: 98%;}
+            }
+        }
     }
 }
 
@@ -200,6 +345,12 @@ article.offer {
         .quality {
             .list {
                 li {flex-basis: 31%;}
+            }
+        }
+
+        .price {
+            .list {
+                li {flex-basis: 70%;}
             }
         }
     }
@@ -227,6 +378,12 @@ article.offer {
         }
 
         .quality {
+            .list {
+                li {flex-basis: 30%;}
+            }
+        }
+
+        .price {
             .list {
                 li {flex-basis: 30%;}
             }
