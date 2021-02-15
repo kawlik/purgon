@@ -41,6 +41,7 @@ header.page-menu {
                 ul {
                 @include stdBorder(darken($colorMainLight, 10%));
                 @include stdFlex(column, nowrap);
+                @include stdTransition();
                                         
                     list-style: none;
                     transform: translateX(-50%) translateY(100%);

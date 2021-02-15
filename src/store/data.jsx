@@ -52,11 +52,11 @@ const offer = {
         entry: {
             title: 'Social Media',
             body: 'W Polsce i na świecie z dnia na dzień pojawia się coraz większa liczba użytkowników Mediów Społecznościowych, a przez to obecność w nich jest wręcz obowiązkowa! Wykorzystamy nieograniczone możliwości Facebooka, Instagrama i Linkedina, aby docierać do Twoich klientów. Przygotujemy dla Ciebie strategię marketingową dzięki, której zwiększysz sprzedaż i rozpoznawalność swojej marki.',
-            img_01: img_01,
+            img: img_01,
         },
         
         
-        list_1: {
+        services: {
             title: 'Jak działamy?',
             elems: [
                 'Analizujemy branżę i tworzymy strategię',
@@ -68,7 +68,7 @@ const offer = {
         },
         
         
-        list_2: {
+        quality: {
             title: 'Zalety obecności w Social Media?',
             elems: [
                 'Zwiększona rozpoznawalność marki',
@@ -102,11 +102,11 @@ const offer = {
         entry: {
             title: 'Strony Internetowe',
             body: 'W Polsce i na świecie z dnia na dzień pojawia się coraz większa liczba użytkowników Mediów Społecznościowych, a przez to obecność w nich jest wręcz obowiązkowa! Wykorzystamy nieograniczone możliwości Facebooka, Instagrama i Linkedina, aby docierać do Twoich klientów. Przygotujemy dla Ciebie strategię marketingową dzięki, której zwiększysz sprzedaż i rozpoznawalność swojej marki.',
-            img_01: img_02,
+            img: img_02,
         },
         
         
-        list_1: {
+        services: {
             title: 'Jak działamy?',
             elems: [
                 'Analizujemy branżę i tworzymy strategię',
@@ -118,7 +118,7 @@ const offer = {
         },
         
         
-        list_2: {
+        quality: {
             title: 'Zalety obecności w Social Media?',
             elems: [
                 'Zwiększona rozpoznawalność marki',
@@ -130,17 +130,14 @@ const offer = {
         
         prices: [
             {
-                color: 'green',
                 amount: '799 zł',
                 services: ['prowadzenie Facebook lub Instagram', 'przygotowanie strategii marketingowej', 'tworzenie i publikacja treści', 'zwiększanie zainteresowania',],
             },
             {
-                color: 'yellow',
                 amount: '1499 zł',
                 services: ['prowadzenie Facebook i Instagram', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
             },
             {
-                color: 'blue',
                 amount: '2499 zł',
                 services: ['prowadzenie Facebook i Instagram', 'pełna obsługa mediów społecznościowych', 'kampanie reklamowe', 'dodatkowa możliwość prowadzenia LinkedIn i Pinterest',],
             },
@@ -151,11 +148,11 @@ const offer = {
         entry: {
             title: 'Reklamy Google',
             body: 'W Polsce i na świecie z dnia na dzień pojawia się coraz większa liczba użytkowników Mediów Społecznościowych, a przez to obecność w nich jest wręcz obowiązkowa! Wykorzystamy nieograniczone możliwości Facebooka, Instagrama i Linkedina, aby docierać do Twoich klientów. Przygotujemy dla Ciebie strategię marketingową dzięki, której zwiększysz sprzedaż i rozpoznawalność swojej marki.',
-            img_01: img_03,
+            img: img_03,
         },
         
         
-        list_1: {
+        services: {
             title: 'Jak działamy?',
             elems: [
                 'Analizujemy branżę i tworzymy strategię',
@@ -167,7 +164,7 @@ const offer = {
         },
         
         
-        list_2: {
+        quality: {
             title: 'Zalety obecności w Social Media?',
             elems: [
                 'Zwiększona rozpoznawalność marki',
@@ -179,17 +176,14 @@ const offer = {
         
         prices: [
             {
-                color: 'green',
                 amount: '799 zł',
                 services: ['prowadzenie Facebook lub Instagram', 'przygotowanie strategii marketingowej', 'tworzenie i publikacja treści', 'zwiększanie zainteresowania',],
             },
             {
-                color: 'yellow',
                 amount: '1499 zł',
                 services: ['prowadzenie Facebook i Instagram', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
             },
             {
-                color: 'blue',
                 amount: '2499 zł',
                 services: ['prowadzenie Facebook i Instagram', 'pełna obsługa mediów społecznościowych', 'kampanie reklamowe', 'dodatkowa możliwość prowadzenia LinkedIn i Pinterest',],
             },
@@ -200,11 +194,11 @@ const offer = {
         entry: {
             title: 'Pozycjonowanie Stron',
             body: 'W Polsce i na świecie z dnia na dzień pojawia się coraz większa liczba użytkowników Mediów Społecznościowych, a przez to obecność w nich jest wręcz obowiązkowa! Wykorzystamy nieograniczone możliwości Facebooka, Instagrama i Linkedina, aby docierać do Twoich klientów. Przygotujemy dla Ciebie strategię marketingową dzięki, której zwiększysz sprzedaż i rozpoznawalność swojej marki.',
-            img_01: img_04,
+            img: img_04,
         },
         
         
-        list_1: {
+        services: {
             title: 'Jak działamy?',
             elems: [
                 'Analizujemy branżę i tworzymy strategię',
@@ -216,7 +210,7 @@ const offer = {
         },
         
         
-        list_2: {
+        quality: {
             title: 'Zalety obecności w Social Media?',
             elems: [
                 'Zwiększona rozpoznawalność marki',
@@ -228,12 +222,10 @@ const offer = {
         
         prices: [
             {
-                color: 'green',
                 amount: '799 zł',
                 services: ['prowadzenie Facebook lub Instagram', 'przygotowanie strategii marketingowej', 'tworzenie i publikacja treści', 'zwiększanie zainteresowania',],
             },
             {
-                color: 'yellow',
                 amount: '1499 zł',
                 services: ['prowadzenie Facebook i Instagram', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
             },
@@ -249,11 +241,11 @@ const offer = {
         entry: {
             title: 'Projekty graficzne',
             body: 'W Polsce i na świecie z dnia na dzień pojawia się coraz większa liczba użytkowników Mediów Społecznościowych, a przez to obecność w nich jest wręcz obowiązkowa! Wykorzystamy nieograniczone możliwości Facebooka, Instagrama i Linkedina, aby docierać do Twoich klientów. Przygotujemy dla Ciebie strategię marketingową dzięki, której zwiększysz sprzedaż i rozpoznawalność swojej marki.',
-            img_01: img_05,
+            img: img_05,
         },
         
         
-        list_1: {
+        services: {
             title: 'Jak działamy?',
             elems: [
                 'Analizujemy branżę i tworzymy strategię',
@@ -265,7 +257,7 @@ const offer = {
         },
         
         
-        list_2: {
+        quality: {
             title: 'Zalety obecności w Social Media?',
             elems: [
                 'Zwiększona rozpoznawalność marki',
@@ -277,17 +269,14 @@ const offer = {
         
         prices: [
             {
-                color: 'green',
                 amount: '799 zł',
                 services: ['prowadzenie Facebook lub Instagram', 'przygotowanie strategii marketingowej', 'tworzenie i publikacja treści', 'zwiększanie zainteresowania',],
             },
             {
-                color: 'yellow',
                 amount: '1499 zł',
                 services: ['prowadzenie Facebook i Instagram', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
             },
             {
-                color: 'blue',
                 amount: '2499 zł',
                 services: ['prowadzenie Facebook i Instagram', 'pełna obsługa mediów społecznościowych', 'kampanie reklamowe', 'dodatkowa możliwość prowadzenia LinkedIn i Pinterest',],
             },
@@ -298,11 +287,11 @@ const offer = {
         entry: {
             title: 'Video i zdjęcia',
             body: 'W Polsce i na świecie z dnia na dzień pojawia się coraz większa liczba użytkowników Mediów Społecznościowych, a przez to obecność w nich jest wręcz obowiązkowa! Wykorzystamy nieograniczone możliwości Facebooka, Instagrama i Linkedina, aby docierać do Twoich klientów. Przygotujemy dla Ciebie strategię marketingową dzięki, której zwiększysz sprzedaż i rozpoznawalność swojej marki.',
-            img_01: img_06,
+            img: img_06,
         },
         
         
-        list_1: {
+        services: {
             title: 'Jak działamy?',
             elems: [
                 'Analizujemy branżę i tworzymy strategię',
@@ -314,7 +303,7 @@ const offer = {
         },
         
         
-        list_2: {
+        quality: {
             title: 'Zalety obecności w Social Media?',
             elems: [
                 'Zwiększona rozpoznawalność marki',
@@ -326,17 +315,14 @@ const offer = {
         
         prices: [
             {
-                color: 'green',
                 amount: '799 zł',
                 services: ['prowadzenie Facebook lub Instagram', 'przygotowanie strategii marketingowej', 'tworzenie i publikacja treści', 'zwiększanie zainteresowania',],
             },
             {
-                color: 'yellow',
                 amount: '1499 zł',
                 services: ['prowadzenie Facebook i Instagram', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
             },
             {
-                color: 'blue',
                 amount: '2499 zł',
                 services: ['prowadzenie Facebook i Instagram', 'pełna obsługa mediów społecznościowych', 'kampanie reklamowe', 'dodatkowa możliwość prowadzenia LinkedIn i Pinterest',],
             },
@@ -347,11 +333,11 @@ const offer = {
         entry: {
             title: 'Akcesoria Marketingowe',
             body: 'W Polsce i na świecie z dnia na dzień pojawia się coraz większa liczba użytkowników Mediów Społecznościowych, a przez to obecność w nich jest wręcz obowiązkowa! Wykorzystamy nieograniczone możliwości Facebooka, Instagrama i Linkedina, aby docierać do Twoich klientów. Przygotujemy dla Ciebie strategię marketingową dzięki, której zwiększysz sprzedaż i rozpoznawalność swojej marki.',
-            img_01: img_07,
+            img: img_07,
         },
         
         
-        list_1: {
+        services: {
             title: 'Jak działamy?',
             elems: [
                 'Analizujemy branżę i tworzymy strategię',
@@ -363,7 +349,7 @@ const offer = {
         },
         
         
-        list_2: {
+        quality: {
             title: 'Zalety obecności w Social Media?',
             elems: [
                 'Zwiększona rozpoznawalność marki',
@@ -375,17 +361,14 @@ const offer = {
         
         prices: [
             {
-                color: 'green',
                 amount: '799 zł',
                 services: ['prowadzenie Facebook lub Instagram', 'przygotowanie strategii marketingowej', 'tworzenie i publikacja treści', 'zwiększanie zainteresowania',],
             },
             {
-                color: 'yellow',
                 amount: '1499 zł',
                 services: ['prowadzenie Facebook i Instagram', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
             },
             {
-                color: 'blue',
                 amount: '2499 zł',
                 services: ['prowadzenie Facebook i Instagram', 'pełna obsługa mediów społecznościowych', 'kampanie reklamowe', 'dodatkowa możliwość prowadzenia LinkedIn i Pinterest',],
             },

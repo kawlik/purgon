@@ -22,6 +22,20 @@ class ScrollAnim {
     }
 
 
+    restore = () => {
+        this.nodeList = document.querySelectorAll(this.selector);
+        if(this.nodeList.length > 0) {
+            
+            this.nodeList = [...this.nodeList];
+            this.nodeList.forEach(elem => {
+                elem.style.opacity = '1';
+                this.removeAnimation(elem);
+                this.nodeList = this.nodeList.filter(e => e !== elem);
+            });
+        }
+    }
+
+
     startListening = callback => {
         document.addEventListener('scroll', callback);
     }
@@ -49,6 +63,10 @@ class ScrollAnim {
 
     addAnimation = elem => {
         elem.style.animation = this.animation;
+    }
+
+    removeAnimation = elem => {
+        elem.style.animation = '';
     }
 }
 
