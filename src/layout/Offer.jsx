@@ -4,6 +4,7 @@ import Entry from '../component/offer/Entry';
 import Quality from '../component/offer/Quality';
 import Services from '../component/offer/Services';
 import Price from '../component/offer/Price';
+import Table from '../component/offer/Table';
 
 import ScrollAnim from '../script/ScrollAnim';
 
@@ -31,13 +32,15 @@ const Offer = ({ content }) => {
     return(
     <article className='offer'>
     
-        <Entry title={content.entry.title} body={content.entry.body} img={content.entry.img}/>
+        {content?.entry && <Entry title={content.entry.title} body={content.entry.body} img={content.entry.img}/>}
 
-        <Services category={content.entry.title} title={content.services.title} elems={content.services.elems}/>
+        {content?.services && <Services category={content.entry.title} title={content.services.title} elems={content.services.elems}/>}
 
-        <Quality category={content.entry.title} title={content.quality.title} elems={content.quality.elems}/>
+        {content?.quality && <Quality category={content.entry.title} title={content.quality.title} elems={content.quality.elems}/>}
 
-        <Price category={content.entry.title} elems={content.prices}/>
+        {content?.prices && <Price category={content.entry.title} elems={content.prices}/>}
+
+        {content?.table && <Table table={content.table}/>}
 
     </article>
 )};

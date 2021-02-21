@@ -1,0 +1,46 @@
+article.game {
+@include stdFlex(row, nowrap);
+@include stdTransition();
+
+    margin: $marginBig  ;
+
+    width: 330px;
+    height: 720px;
+    border: 5px solid $colorSecondary;
+    position: relative;
+
+    .elem {
+    @include stdTransition();
+    
+        width: 48px;
+        height: 48px;
+        background: $colorPrimary;
+
+        &.__left {transform: translateX(320px - 48px);}
+        &.__right {transform: translateX(0);}
+    }
+
+    .spike {
+        animation: spikeMove;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        animation-delay: 0.2s;
+
+        position: absolute;
+        top: 10%;
+        left: 0;
+
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 30px solid $colorSecondary;
+    }
+}
+
+@keyframes spikeMove {
+    form {
+        transform: translateY(0);
+    } to {
+        transform: translateY(500px);
+    }
+}

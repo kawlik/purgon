@@ -13,7 +13,8 @@ const Price = ({ category, elems }) => {
 
     const allElems = elems.map((elem, index) => (
         <li className='animEaseIn' key={index}>
-            <h3 className={`__${index + 1}`}>{elem.amount}<a href={`tel: ${contact.phone_1}`}><FaPhoneAlt/></a></h3>
+            <h4>{elem.name}</h4>
+            <h3 className={`__${index + 1}`}>{elem.amount}<a href={`tel:${contact.phone1}`}><FaPhoneAlt/></a></h3>
             <ul className='subList'>{elem.services.map((service, subIndex) => <li key={100*index + subIndex}>{service}</li>)}</ul>
         </li>));
 

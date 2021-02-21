@@ -15,7 +15,7 @@ const PageBanner = () => {
     useEffect(() => {
 
         const jumpIn = new InstantAnim('.animJumpIn');
-        jumpIn.setUp('easeIn 0.8s ease-in-out 1 0.8s normal both');
+        jumpIn.setUp('easeIn 0.8s ease-in-out 1 0.6s normal both');
 
     }, [])
 

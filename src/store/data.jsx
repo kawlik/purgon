@@ -31,7 +31,7 @@ const pages = {
             {path: 'akcesoria', name: 'Akcesoria',},
         ],
     },
-    complex: {id: 3, path: 'kompleksowa-obsługa', name: 'Kompleksowa obsługa',},
+    complex: {id: 3, path: 'kompleksowa-obsluga', name: 'Kompleksowa obsługa',},
     contact: {id: 4, path: 'kontakt', name: 'Kontakt',},
 };
 
@@ -79,17 +79,17 @@ const offer = {
         
         prices: [
             {
-                color: 'green',
+                name: 'Mini',
                 amount: '799 zł',
                 services: ['prowadzenie Facebook lub Instagram', 'przygotowanie strategii marketingowej', 'tworzenie i publikacja treści', 'zwiększanie zainteresowania',],
             },
             {
-                color: 'yellow',
+                name: 'Premium',
                 amount: '1499 zł',
                 services: ['prowadzenie Facebook i Instagram', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
             },
             {
-                color: 'blue',
+                name: 'VIP',
                 amount: '2499 zł',
                 services: ['prowadzenie Facebook i Instagram', 'pełna obsługa mediów społecznościowych', 'kampanie reklamowe', 'dodatkowa możliwość prowadzenia LinkedIn i Pinterest',],
             },
@@ -128,10 +128,12 @@ const offer = {
         
         prices: [
             {
+                name: 'Strona wizytówka',
                 amount: '1500 zł',
                 services: ['strona do 5 sekcji', 'galeria zdjęć (wraz z ich optymalizacją)', 'podpięcie map Google', 'formularz kontaktowy', 'brak podstron', 'aktywne numery telefonów', 'prosta, uniwersalna polityka prywatności', 'ustawione informacje o cookies',],
             },
             {
+                name: 'Strona firmowa',
                 amount: '2500 zł',
                 services: ['wszystkie opcje jak w stronie wizytówce', 'podstrony', 'kalendarz zajęć (google)', 'lista obiektów', 'portfolio', 'indywidualne dostosowania',],
             },
@@ -169,21 +171,15 @@ const offer = {
         
         prices: [
             {
-                amount: '??? zł',
-                services: ['?', '?', '?',],
-            },
-            {
-                amount: '??? zł',
-                services: ['?', '?', '?',],
-            },
-            {
-                amount: '??? zł',
-                services: ['?', '?', '?',],
+                name: 'GoogleAds',
+                amount: '1499 zł',
+                services: ['Pełen pakiet usług',],
             },
         ],
     },
 
     positioning: {
+
         entry: {
             title: 'Pozycjonowanie Stron',
             body: 'SEO to działania, które mają na celu zwiększenie zauważalności twojej strony w wyszukiwarkach internetowych. Kompleksowo zajmujemy się wszystkimi aspektami technicznymi dzięki, którym Twoja witryna zostanie zauważona i pojawi się wysoko w przeglądarkach.',
@@ -214,12 +210,19 @@ const offer = {
         
         prices: [
             {
+                name: 'Kompletny Audyt',
                 amount: '699 zł',
                 services: ['pełny raport wykrytych błędów', 'propozycja strategii pozycjonowania', 'analiza konkurencji',],
             },
             {
+                name: 'Optymalizacja strony',
                 amount: '1199 zł',
-                services: ['pełny audyt i poprawa działania strony pod względem technicznym', 'zwiększenie zasięgów', 'zdobywanie nowych obserwujących', 'promowanie postów',],
+                services: ['pełny audyt i poprawa działania strony pod względem technicznym',],
+            },
+            {
+                name: 'Pozycjonowanie',
+                amount: 'Indywidualnie',
+                services: ['poprawa pozycji w Google', 'zdobywanie linków zewnętrznych', 'generowanie wejść na stronę', 'tworzenie treści dostosowanych pod SEO',],
             },
         ],
     },
@@ -230,42 +233,18 @@ const offer = {
             body: '“Jak Cię widzą - tak Cię piszą”, a jakie masz grafiki - takie masz wyniki.Nasze projekty graficzne zapadają w pamięć i wzbudzają zainteresowanie. To oryginalne i pomysłowe prace wykonane według najnowszych trendów.',
             img: img_05,
         },
-        
-        
-        services: {
-            title: 'Jak działamy?',
-            elems: [
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            ],
-        },
-        
-        
-        quality: {
-            title: 'Zalety ???',
-            elems: [
-                '?',
-                '?',
-                '?',
-            ],
-        },
-        
-        
-        prices: [
-            {
-                amount: '??? zł',
-                services: ['?', '?', '?',],
-            },
-            {
-                amount: '??? zł',
-                services: ['?', '?', '?',],
-            },
-            {
-                amount: '??? zł',
-                services: ['?', '?', '?',],
-            },
+
+        table: [
+            {name: 'Wizytówki', options: [{body: 'Jednostronny projekt', price: '100 zł netto / 123 zł brutto'}, {body: 'Dwustronny projekt', price: '135 zł netto / 166,05 zł brutto'},]},
+            {name: 'Ulotki', options: [{body: 'Jednostronna (A6, A5, A4, DL)', price: '170 zł netto / 209,10 zł brutto'}, {body: 'Dwustronna (A6, A5, A4, DL)', price: '210 zł netto / 258,03 zł brutto'}, {body: 'Składane na 2 (4 strony)', price: '275 zł netto / 338,25 zł brutto'}, {body: 'Składane na 3 (6 stron – np. taka Wasza DLka)', price: '380 zł netto / 467,40 zł brutto'},]},
+            {name: 'Plakaty', options: [{body: 'Jednostronny (A6, A5, A4, DL)', price: '250 zł netto / 307,05 zł brutto'}, {body: 'Dwustronny (A6, A5, A4, DL)', price: '300 zł netto / 369 zł brutto'}]},
+            {name: 'Banery (do druku)', options: [{body: 'Prosty projekt (tło + tekst)', price: '100 zł netto / 123 zł brutto'}, {body: 'Projekt zaawansowany (zdjęcia, teksty, logo, itd.)', price: '250 – 500 zł netto / 307,50 - 615 zł brutto'},]},
+            {name: 'Billboard reklamowy do druku', options: [{body: 'Różne rozmiary', price: '300 zł netto – 600 zł netto / 369 - 738 zł brutto'},]},
+            {name: 'Papier firmowy', options: [{body: 'Różne rodzaje', price: '210 zł netto / 258,03 zł brutto'},]},
+            {name: 'Teczka firmowa A4', options: [{body: 'Różne rodzaje', price: '150 zł netto – 260 zł netto / 184,50 - 319,80 zł brutto'},]},
+            {name: 'Katalog firmowy', options: [{body: '1 strona (zdjęcia, teksty, ilustracje, wykresy, itp.)', price: '120 zł netto / 147,60 zł brutto'}, {body: 'Projekt okładki jeśli jest złożony (tytuł, zdjęcie, opisy, logo, itp.)', price: '250 zł netto / 307,50 zł brutto'},]},
+            {name: 'Menu dla restauracji (do druku)', options: [{body: 'Różne wzory', price: '240 zł netto – 800 zł netto / 295,20 - 984 zł brutto'},]},
+            {name: 'Logo ', options: [{body: 'Logo + spisane kolory + pliki', price: '550 zł netto / 676,50 zł brutto'}, {body: 'Logo + księga znaku + pliki', price: '2000 zł netto / 2460 zł brutto'},]},
         ],
     },
 
@@ -275,43 +254,6 @@ const offer = {
             body: 'Efektowny spot reklamowy to skuteczny sposób na pozyskanie klienta i promocję marki. Produkujemy wysokiej jakości materiały video oraz wykonujemy sesje zdjęciowe.',
             img: img_06,
         },
-        
-        
-        services: {
-            title: 'Jak działamy?',
-            elems: [
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            ],
-        },
-        
-        
-        quality: {
-            title: 'Zalety ???',
-            elems: [
-                '?',
-                '?',
-                '?',
-            ],
-        },
-        
-        
-        prices: [
-            {
-                amount: '??? zł',
-                services: ['?', '?', '?',],
-            },
-            {
-                amount: '??? zł',
-                services: ['?', '?', '?',],
-            },
-            {
-                amount: '??? zł',
-                services: ['?', '?', '?',],
-            },
-        ],
     },
 
     accessory: {
@@ -320,43 +262,6 @@ const offer = {
             body: 'Oferujemy różnorodne akcesoria marketingowe, w tym m.in. plakaty, ulotki, roll-upy, koszulki, kubki, długopisy. Są to wysokiej jakości gadżety promocyjne, które wykorzystać można podczas kampanii reklamowych lub jako upominki dla klientów.',
             img: img_07,
         },
-        
-        
-        services: {
-            title: 'Jak działamy?',
-            elems: [
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            ],
-        },
-        
-        
-        quality: {
-            title: 'Zalety ???',
-            elems: [
-                '?',
-                '?',
-                '?',
-            ],
-        },
-        
-        
-        prices: [
-            {
-                amount: '??? zł',
-                services: ['?', '?', '?',],
-            },
-            {
-                amount: '??? zł',
-                services: ['?', '?', '?',],
-            },
-            {
-                amount: '??? zł',
-                services: ['?', '?', '?',],
-            },
-        ],
     }
 };
 

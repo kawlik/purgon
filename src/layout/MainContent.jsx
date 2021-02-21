@@ -4,11 +4,9 @@ import { Route, Switch } from 'react-router-dom';
 import { StoreContext } from '../store/store';
 
 import Home from './Home';
-
 import Offer from './Offer';
-
-//  import Complex from './Complex';
-//  import Contact from './Contact';
+import Complex from './Complex';
+import Contact from './Contact';
 
 import ErrorPage from './ErrorPage'
 
@@ -41,9 +39,11 @@ const MainContent = () => {
 
         <Route exact path={`/${pages.offer.pages[6].path}`} render={() => <Offer content={offer.accessory}/>}/>
 
-        <Route exact path={`/${pages.complex.path}`} render={() => <ErrorPage/>}/>
 
-        <Route exact path={`/${pages.contact.path}`} render={() => <ErrorPage/>}/>
+        <Route exact path={`/${pages.complex.path}`} render={() => <Complex/>}/>
+
+        <Route exact path={`/${pages.contact.path}`} render={() => <Contact/>}/>
+        
 
         <Route render={() => <ErrorPage/>}/>
 

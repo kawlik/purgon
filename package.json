@@ -1,6 +1,7 @@
 {
   "name": "purgon-media",
   "homepage": "https://kawlik.github.io/purgon/",
+  "homepage_alt": "https://www.pugon.pl/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

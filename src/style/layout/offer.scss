@@ -7,14 +7,16 @@ article.offer {
     max-width: 1400px;
 
     .title {
+        font-size: 32px;
+        text-align: center;
         position: relative;
 
         span {
             min-width: 260px;
             position: absolute;
             left: 50%;
-            top: -50%;
-            transform: translateX(-50%);
+            top: 0;
+            transform: translateX(-50%) translateY(-100%);
 
             font-size: 16px;
             color: $colorSecondary;
@@ -47,7 +49,9 @@ article.offer {
     gap: 10px;
 
         .elem {
-            min-height: 200px;
+        @include stdFlex(column, nowrap, center);
+
+            min-height: 250px;
             border-radius: $radiusBig;
             padding: $paddingBig $paddingSmall;
             overflow: hidden;
@@ -55,7 +59,9 @@ article.offer {
         }
 
         h2 {
-            font-size: 42px;
+            width: 100%;
+            text-align: left;
+            font-size: 36px;
             font-weight: 300;
         }
 
@@ -80,12 +86,6 @@ article.offer {
     .services {
     @include stdFlex(column, nowrap);
     gap: 30px;
-
-        .title {
-            font-size: 36px;
-            letter-spacing: 2px;
-            text-align: center;
-        }
 
         .list {
         @include stdFlex(row, wrap, space-around, stretch);
@@ -148,12 +148,6 @@ article.offer {
     @include stdFlex(column, nowrap, space-around);
     gap: 30px;
 
-        .title {
-            font-size: 36px;
-            letter-spacing: 2px;
-            text-align: center;
-        }
-
         .list {
         @include stdFlex(row, wrap, space-around, stretch);
 
@@ -185,20 +179,61 @@ article.offer {
         }
     }
 
+    .table {
+    @include stdFlex(column, nowrap);
+
+        gap: 10px;
+        margin: $marginBig $marginSmall;
+
+        .elem-row {
+        @include stdFlex(row, nowrap, space-between);
+
+            gap: 5px;
+            width: 100%;
+            border-radius: $marginMedium;
+            padding: $paddingMedium;
+
+            &.__light {background-color: $colorMainLight;}
+            &.__dark {background-color: darken($colorMainLight, 10%);}
+            
+            h5 {
+                display: block;
+                flex-basis: 40%
+            }
+
+            ol {
+            @include stdFlex(column, nowrap);
+
+                list-style: none;
+                flex-basis: 60%;
+                gap: 10px;
+
+                li {
+                @include stdFlex(row, nowrap);
+
+                    width: 100%;
+                    padding: $paddingSmall;
+                    border-bottom: 1px dotted $colorSecondary;
+
+                    span {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
     .price {
     @include stdFlex(column, nowrap);
     gap: 30px;
-    
-        .title {
-            font-size: 36px;
-            letter-spacing: 2px;
-            text-align: center;
-        }
+    width: 100%;
     
         .list {
         @include stdFlex(row, wrap, space-around, stretch);
     
             gap: 30px;
+            min-width: 40%;
             list-style: none;
             
             li {
@@ -210,11 +245,23 @@ article.offer {
                 background: $colorMainLight;
                 padding: 40px 0;
 
+                h4 {
+                @include stdTransition();
+                
+                    width: 100%;
+                    font-size: 32px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    text-align: center;
+                    opacity: 0.3;
+                    padding: $paddingMedium 0;
+                }
+
                 h3 {
                 @include stdFlex(row, nowrap, space-between);
                 @include stdTransition();
 
-                    width: 80%;
+                    width: 92%;
                     border-top-right-radius: $radiusMax;
                     border-bottom-right-radius: $radiusMax;
 
@@ -316,6 +363,12 @@ article.offer {
             }
         }
 
+        .table {
+            .elem-row {
+                li.price-tag {flex-direction: column;}
+            }
+        }
+
         .price {
             .list {
                 li {flex-basis: 98%;}
@@ -345,6 +398,12 @@ article.offer {
         .quality {
             .list {
                 li {flex-basis: 31%;}
+            }
+        }
+
+        .table {
+            .elem-row {
+                li.price-tag {flex-direction: column;}
             }
         }
 
@@ -383,9 +442,17 @@ article.offer {
             }
         }
 
+        .table {
+            .elem-row {
+                li.price-tag {flex-direction: row;}
+            }
+        }
+
         .price {
             .list {
-                li {flex-basis: 30%;}
+                li {
+                    flex-basis: 30%;
+                }
             }
         }
     }
